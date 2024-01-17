@@ -34,12 +34,30 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
 
+# Launch starting applications
+exec --no-startup-id discord
+exec --no-startup-id firefox
+exec --no-startup-id spotify-launcher
+exec --no-startup-id easyeffects
+exec --no-startup-id nvidia-settings -l
+
+
+# Launch dynamic_desktop_script to change desktop wallpaper on boot
+
+#exec --no-startup-id playerctl
+
+
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+# Media player controls
+bindsym XF86AudioPlay exec playerctl --player='spotify,firefox' play-pause
+bindsym XF86AudioPause exec playerctl --player='spotify,firefox' play-pause
+bindsym XF86AudioNext exec playerctl --player='spotify,firefox' next
+bindsym XF86AudioPrev exec playerctl --player='spotify,firefox' previous
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -121,6 +139,7 @@ set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
 
+
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
 bindsym $mod+2 workspace number $ws2
@@ -132,6 +151,17 @@ bindsym $mod+7 workspace number $ws7
 bindsym $mod+8 workspace number $ws8
 bindsym $mod+9 workspace number $ws9
 bindsym $mod+0 workspace number $ws10
+
+# Assign workspace applications
+# xprop | grep WM_CLASS | awk '{ print $4 }' Use this and click on the window to get the class name
+assign [class="firefox"] $ws1
+assign [class="discord"] $ws2
+assign [class="Spotify"] $ws2
+assign [class="easyeffects"] $ws9
+
+# Switch workspaces to correct monitors
+workspace $ws2 output DP-2
+workspace $ws9 output DP-2
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace number $ws1
@@ -145,6 +175,10 @@ bindsym $mod+Shift+8 move container to workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 
+# move workspace to other monitors
+bindsym $mod+Ctrl+Right move workspace to output right
+bindsym $mod+Ctrl+Left move workspace to output left
+
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
@@ -154,6 +188,7 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 
 bindsym $mod+Control+d exec setxkbmap dk
 bindsym $mod+Control+u exec setxkbmap us
+
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -238,9 +273,9 @@ bindsym XF86MonBrightnessUp exec brightnessctl set 10%+
 bindsym XF86MonBrightnessDown exec brightnessctl set 10%- 
 
 # Bind screenshots
-bindsym Print exec flameshot screen -p ~/Pictures/FScreenshots
-bindsym Ctrl+Print exec flameshot screen -c -p ~/Pictures/FScreenshots
-bindsym Shift+Print exec flameshot gui -c -p ~/Pictures/FScreenshots
+#bindsym Print exec flameshot screen -p ~/Pictures/FScreenshots
+#bindsym Ctrl+Print exec flameshot screen -c -p ~/Pictures/FScreenshots
+#bindsym Shift+Print exec flameshot gui -c -p ~/Pictures/FScreenshots
 
 # Redshift modes
 # redshift modes
@@ -262,10 +297,14 @@ mode "$mode_redshift" {
 
 
 # TODO: Check the hostname or something, this is only for the XPS machine
-exec xinput set-prop "VEN_04F3:00 04F3:311C Touchpad" "libinput Tapping Enabled" 1
-exec xinput set-prop "VEN_04F3:00 04F3:311C Touchpad" "libinput Natural Scrolling Enabled" 1
+#exec xinput set-prop "VEN_04F3:00 04F3:311C Touchpad" "libinput Tapping Enabled" 1
+#exec xinput set-prop "VEN_04F3:00 04F3:311C Touchpad" "libinput Natural Scrolling Enabled" 1
 
 exec_always --no-startup-id picom --config ~/.config/picom/picom.conf --log-file /var/log/picom.log
 exec_always --no-startup-id nitrogen --restore
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 exec_always --no-startup-id dunst -conf ~/.config/dunst/dunstrc
+
+exec_always --no-startup-id ~/Downloads/alberts_dotfiles/dynamic_desktop_script/dds.sh 
+exec --no-startup-id /usr/lib/polkit-kde-authentication-agent-1 
+

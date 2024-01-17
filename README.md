@@ -1,3 +1,6 @@
+# THIS IS A FORK FROM ALBE's Dotfiles. These have been modifed to be used with my own PC use them at your own risk.
+## The install guide files have been left untouched as these were fairly good to get going for me but it does require a bit of troubleshooting. 
+
 # .files
 
 ## Requirements

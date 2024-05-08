@@ -44,6 +44,11 @@
       nixosModules = ./gosling/os.nix;
       homeModules = ./gosling/home.nix;
     };
+		sluggy = {
+			info = (import ./sluggy/info.nix) {}; 
+			nixosModules = ./sluggy/os.nix;
+			homeModules = ./sluggy/home.nix;
+		};
   };
 
   hosts =

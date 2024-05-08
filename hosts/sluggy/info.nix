@@ -1,5 +1,5 @@
 {...}: let
-  name = "gosling";
+  name = "sluggy";
   diskPath = "/dev/nvme0n1";
   disko = import ./disko.nix {diskPath = diskPath;};
 in {

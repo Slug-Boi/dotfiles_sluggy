@@ -13,6 +13,8 @@ Create a new directory in the `hosts` directory with the name of the host. This 
 ## Step 2: `hardware-configuration.nix`
 This file is specific to the hardware of the host. This file can be generated using the `nixos-generate-config` command. This file should be placed in the `hosts/<host>` directory.
 
+After adding it to your hosts directory open it and delete everthing regarding the file system. If you want to save it to a different file for reference when creating `disko.nix`. The things to be deleted start with `filesystem.` or `swapDevices`
+
 ## Step 3: `home.nix`
 This file is specific to the user level configuration of the host. This file should import modules from the `home` directory and specify everything that should be configured and installed on the user level.
 
@@ -77,6 +79,20 @@ in {
   networking.hostName = info.name; # Define your hostname.
 }
 ```
+
+### Step 7.1: Nvidia
+If you have an Nvidia graphics card you should include `../../modules/core/nvidia.nix` in `os.nix`.
+
+If you have a laptop with an Nvidia graphics card you should run `sudo lshw -c display` and find your bus ids. [See this wiki page for how](https://nixos.wiki/wiki/Nvidia#Laptop_Configuration:_Hybrid_Graphics_.28Nvidia_Optimus_PRIME.29) and paste them into you `os.nix` as follows:
+```nix
+hardware.nvidia.prime = {
+    # Make sure to use the correct Bus ID values for your system!
+    intelBusId = "PCI:0:2:0";
+    nvidiaBusId = "PCI:1:0:0";
+};
+```
+
+Then make sure you import `../../modules/core/nvidia-prime.nix`
 
 ## Step 8: Configure it
 In the `hosts/default.nix` file, add the new host to the list of hosts. This will configure it as a nixosConfiguration and create an installer for it.

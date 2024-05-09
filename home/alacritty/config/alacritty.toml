@@ -1,4 +1,4 @@
-import = ["/home/goose/.config/alacritty/theme.toml"]
+import = ["/home/sluggy/.config/alacritty/theme.toml"]
 
 [cursor]
 blink_interval = 750

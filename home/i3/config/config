@@ -5,6 +5,10 @@
 # this file and re-run i3-config-wizard(1).
 #
 
+# Setup nvidia-settings
+exec --no-startup-id nvidia-settings -a [gpu:0]/DigitalVibrance[DP-2]=719
+exec --no-startup-id nvidia-settings -a [gpu:0]/DigitalVibrance[DP-4]=719
+
 # i3 config file (v4)
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!

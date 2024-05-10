@@ -4,10 +4,16 @@
 # Should you change your keyboard layout some time, delete
 # this file and re-run i3-config-wizard(1).
 #
+#
+# Xrandr enable second monitor
+#exec --no-startup-id xrandr --output DP-2 --right-of DP-0 --auto
+
+# Xrandr change refresh rate
+#exec --no-startup-id xrandr --output DP-0 --mode 1920x1080 --rate 144
 
 # Setup nvidia-settings
+exec --no-startup-id nvidia-settings -a [gpu:0]/DigitalVibrance[DP-0]=719
 exec --no-startup-id nvidia-settings -a [gpu:0]/DigitalVibrance[DP-2]=719
-exec --no-startup-id nvidia-settings -a [gpu:0]/DigitalVibrance[DP-4]=719
 
 # i3 config file (v4)
 #
@@ -227,7 +233,7 @@ mode "$mode_gaps_outer" {
 for_window[class=".*"] border pixel 3
 gaps inner 10
 gaps outer 10
-gaps top 30
+gaps top 10
 gaps bottom 10
 
 # class                 border  backgr. text    indicator child_border

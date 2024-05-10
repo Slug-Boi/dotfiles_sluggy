@@ -44,8 +44,9 @@
         "_GTK_FRAME_EXTENTS@:c"
         "class_g = 'Polybar'"
       ];
-
-      corner-radious = 15;
+      
+      
+      corner-radius = 7;
       rounded-corners-exclude = [
         "window_type = 'dock'"
         "window_type = 'desktop'"

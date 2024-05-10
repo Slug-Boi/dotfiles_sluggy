@@ -4,7 +4,8 @@
   pkgs,
   modulesPath,
   ...
-}: {
+}:
+{
   imports = [
     (modulesPath + "/installer/scan/not-detected.nix")
   ];
@@ -34,7 +35,6 @@
     nvidiaBusId = "PCI:1:0:0";
   };
 }
-
 {
   config,
   lib,

@@ -6,7 +6,7 @@
   home.packages = with pkgs; [
     discord
     spotify
-    easyeffects
+    pulseeffects-legacy
   ];
 
   programs.firefox = {

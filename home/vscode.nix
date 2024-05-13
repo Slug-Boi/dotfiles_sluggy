@@ -9,6 +9,12 @@
       ms-toolsai.jupyter-renderers
       ms-toolsai.vscode-jupyter-cell-tags
       ms-toolsai.vscode-jupyter-slideshow
-    ];
+      Ionide.Ionide-fsharp
+      ms-dotnettools.vscode-dotnet-pack
+      ms-vsliveshare.vsliveshare
+      ms-vscode.cpptools
+      golang.Go
+      jebbs.plantuml
+      ];
   };
 }

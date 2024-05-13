@@ -10,7 +10,8 @@
       ms-toolsai.vscode-jupyter-cell-tags
       ms-toolsai.vscode-jupyter-slideshow
       #ms-dotnettools.vscode-dotnet-pack
-      #Ionide.Ionide-fsharp
+      ms-dotnettools.csharp
+      ionide.ionide-fsharp
       ms-vsliveshare.vsliveshare
       ms-vscode.cpptools
       golang.go

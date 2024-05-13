@@ -13,7 +13,7 @@
       #Ionide.Ionide-fsharp
       ms-vsliveshare.vsliveshare
       ms-vscode.cpptools
-      golang.Go
+      golang.go
       jebbs.plantuml
       ];
   };

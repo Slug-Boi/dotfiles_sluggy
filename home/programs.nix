@@ -7,6 +7,7 @@
     discord
     spotify
     pulseeffects-legacy
+    prismlauncher
   ];
 
   programs.firefox = {

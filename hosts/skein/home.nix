@@ -18,7 +18,9 @@
 
     ../../home/langs.nix
     ../../home/python3.nix
+    ../../home/tex.nix
 
+    ../../home/gcloud.nix
     ../../home/programs.nix
     ../../home/tmux.nix
     ../../home/utils.nix

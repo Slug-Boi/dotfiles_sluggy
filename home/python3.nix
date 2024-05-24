@@ -39,9 +39,14 @@
 
       # eduroam
       dbus-python
+
+      # Hacking
+      dnspython
     ];
 in {
-  home.packages = [
-    ((pkgs.python3.withPackages python-packages).override (args: {ignoreCollisions = true;}))
+  home.packages = with pkgs; [
+    poetry 
+
+    ((python3.withPackages python-packages).override (args: {ignoreCollisions = true;}))
   ];
 }

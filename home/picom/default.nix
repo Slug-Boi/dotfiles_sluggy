@@ -23,6 +23,7 @@
       "85:class_g = 'Code'"
       "85:class_g = 'nautilus'"
       "85:class_g = 'Zathura'"
+      "88:class_g = 'Spotify'"
     ];
 
     settings = {

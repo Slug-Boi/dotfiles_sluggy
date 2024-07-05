@@ -33,6 +33,13 @@
     ))
   ];
 
+  # Disable sleep for desktop to try to avoid window freezes
+  # Due to inactivity
+  systemd.targets.sleep.enable = false;
+  systemd.targets.suspend.enable = false;
+  systemd.targets.hibernate.enable = false;
+  systemd.targets.hybrid-sleep.enable = false;
+
   services = {
     dbus.packages = [pkgs.gcr];
     xserver.monitorSection = ''

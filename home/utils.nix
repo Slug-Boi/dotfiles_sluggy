@@ -23,5 +23,8 @@
 
     # Networks
     networkmanagerapplet
+
+    # Virtualization
+    virtualbox
   ];
 }

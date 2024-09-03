@@ -5,6 +5,7 @@
     gnutar
     ripgrep
     unzip
+    baobab
 
     # Programming
     gh

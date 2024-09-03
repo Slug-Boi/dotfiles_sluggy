@@ -25,6 +25,6 @@
     networkmanagerapplet
 
     # Virtualization
-    virtualbox
+    virtualboxWithExtpack
   ];
 }

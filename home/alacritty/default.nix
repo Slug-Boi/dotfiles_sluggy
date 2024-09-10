@@ -11,7 +11,7 @@
 
     settings = {
       font = {
-        size = 8;
+        size = 12;
 
         normal = {
           family = theme.font.family;

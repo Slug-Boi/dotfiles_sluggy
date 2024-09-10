@@ -5,13 +5,14 @@
   home-manager,
   disko,
   variables,
+  theme,
   self,
   ...
 }: let
   x64System = "x86_64-linux";
 
   x64SpecialArgs = {
-    inherit variables;
+    inherit variables theme;
 
     username = variables.username;
 
@@ -20,6 +21,13 @@
 
       # Necessary for installing paid or non-free software
       config.allowUnfree = true;
+
+      config.permittedInsecurePackages = [
+        "electron-29.4.6"
+      ];
+
+      # Overlays are only applied to the unstable channel, since they probably are
+      overlays = [];
     };
   };
 

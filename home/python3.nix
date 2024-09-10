@@ -42,10 +42,14 @@
 
       # Hacking
       dnspython
+
+      # Excel
+      openpyxl
     ];
 in {
   home.packages = with pkgs; [
-    poetry 
+    poetry
+    poppler_utils
 
     ((python3.withPackages python-packages).override (args: {ignoreCollisions = true;}))
   ];

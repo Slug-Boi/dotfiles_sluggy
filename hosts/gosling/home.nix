@@ -21,11 +21,17 @@
     ../../home/python3.nix
     ../../home/tex.nix
 
+    ../../home/anytype.nix
     ../../home/gcloud.nix
     ../../home/obs.nix
+    ../../home/phpstorm.nix
+    ../../home/php.nix
     ../../home/programs.nix
     ../../home/tmux.nix
+    ../../home/todo.nix
     ../../home/utils.nix
     ../../home/vscode.nix
+
+    ../../home/courses/htmaa.nix
   ];
 }

@@ -1,3 +1,5 @@
+-- WARNING: If for some reason you get an error related to not being able to load the rust-analyzer server dynamically then try and delete ~/.local/share/nvim/mason/bin/rust_analyzer. This file may exist and be first in the path compared to the one installed correctly by nix itself.
+
 local opts = {
   -- Rust tools options
   tools = {
@@ -32,7 +34,7 @@ return {
   dependencies = {
     {
       "mrcjkb/rustaceanvim",
-      version = "^4",
+      version = "^5",
       lazy = false,
     }
   },

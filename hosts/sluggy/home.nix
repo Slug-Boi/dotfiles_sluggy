@@ -19,7 +19,9 @@
     ../../home/k8.nix
     ../../home/langs.nix
     ../../home/python3.nix
-
+      
+    ../../home/anytype.nix
+    ../../home/todo.nix
     ../../home/obs.nix
     ../../home/programs.nix
     ../../home/tmux.nix

@@ -152,7 +152,7 @@ let user = "karpe"; in
         "com.apple.screensaver" = {
           # Require password immediately after sleep or screen saver begins
           askForPassword = 1;
-          askForPasswordDelay = 0;
+          askForPasswordDelay = 10;
         };
         "com.apple.screencapture" = {
           location = "~/Screenshots";

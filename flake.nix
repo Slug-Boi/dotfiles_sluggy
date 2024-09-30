@@ -34,7 +34,7 @@
       args = {
         variables = import ./variables.nix;
         theme = import ./theme.nix;
-      }
+      };
       user = "karpe";
       linuxSystems = [ "x86_64-linux" "aarch64-linux" ];
       darwinSystems = [ "aarch64-darwin" "x86_64-darwin" ];

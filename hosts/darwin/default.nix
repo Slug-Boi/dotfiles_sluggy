@@ -11,6 +11,7 @@ let user = "karpe"; in
   imports = [
     ../../modules/darwin/home-manager.nix
     ../../modules/shared
+    ./home.nix
     
   ];
 

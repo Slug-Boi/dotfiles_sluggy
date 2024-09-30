@@ -1,5 +1,5 @@
 {pkgs, ...}: {
-  home.packages = with pkgs; [
+  packages = with pkgs; [
     dotnet-sdk_7
     nodejs-18_x
 

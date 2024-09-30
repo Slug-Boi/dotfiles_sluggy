@@ -50,7 +50,6 @@ in
         enableNixpkgsReleaseCheck = false;
         packages = pkgs.callPackage ./packages.nix {};
         file = lib.mkMerge [
-          sharedFiles
         ];
         stateVersion = "23.11";
       };

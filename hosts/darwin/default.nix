@@ -5,11 +5,19 @@
 #  Incomplete list of macOS `defaults` commands :
 #    https://github.com/yannbertrand/macos-defaults
 
-let user = "karpe"; in
+let 
+user = "karpe"
+
+; in
 
 {
+
+  variables = import ../../variables.nix;
+  theme = import ../../theme.nix;
+
+
   imports = [
-    ../../modules/darwin/home-manager.nix
+    ../../modules/darwin/home-manager.nix 
     ../../modules/shared
     
   ];
@@ -38,10 +46,7 @@ let user = "karpe"; in
 
   system.checks.verifyNixPath = false;
 
-  environment.systemPackages = [
-    #emacs-unstable
-  ] ++ (import ../../modules/shared/packages.nix { inherit pkgs; });
-
+  
   # launchd.user.agents.emacs.path = [ config.environment.systemPath ];
   # launchd.user.agents.emacs.serviceConfig = {
   #   KeepAlive = true;

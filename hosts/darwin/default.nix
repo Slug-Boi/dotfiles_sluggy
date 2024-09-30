@@ -59,6 +59,15 @@ let user = "karpe"; in
   time.timeZone = "Europe/Copenhagen";
 
   system = {
+
+  keyboard = {
+      enableKeyMapping = true; # enable key mapping so that we can use `option` as `control`
+
+      remapCapsLockToControl = false; # remap caps lock to control, useful for emac users
+      remapCapsLockToEscape = true; # remap caps lock to escape, useful for vim users
+      
+    };
+
     stateVersion = 4;
 
      # activationScripts are executed every time you boot the system or run `nixos-rebuild` / `darwin-rebuild`.
@@ -168,14 +177,6 @@ let user = "karpe"; in
       # keyboard settings is not very useful on macOS
     # the most important thing is to remap option key to alt key globally,
     # but it's not supported by macOS yet.
-    keyboard = {
-      enableKeyMapping = true; # enable key mapping so that we can use `option` as `control`
-
-      remapCapsLockToControl = false; # remap caps lock to control, useful for emac users
-      remapCapsLockToEscape = true; # remap caps lock to escape, useful for vim users
-      
-    };
-
 
     };
   };

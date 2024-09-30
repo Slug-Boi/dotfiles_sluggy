@@ -3,6 +3,7 @@ modules/lazygit/config/state.yml
 
 .kattisrc*
 result
+.DS_Store*
 
 *.qcow2
 *.iso

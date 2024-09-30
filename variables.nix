@@ -8,12 +8,12 @@ in {
 
   homeDirectory = {
     path = homeDirectory;
-    directories = ["Applications" "Documents" "Downloads" "Music" "Movies" "Pictures" "Sites"];
+    directories = ["Applications" "Documents" "Downloads" "Music" "Movies" "Pictures" "Sites" "Screenshots"];
   };
 
   git = {
     username = "Slug-Boi";
-    email = "theis.p.holm@gmail.com";
+    email = "github.unshipped609@slmail.me";
   };
 
   dotfilesLocation = homeDirectory + (builtins.toPath "/Documents/dotfiles");

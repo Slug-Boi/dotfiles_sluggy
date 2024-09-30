@@ -26,7 +26,7 @@
       pycodestyle
     ];
 in {
-  packages = with pkgs; [
+  home.packages = with pkgs; [
     poetry
     poppler_utils
 

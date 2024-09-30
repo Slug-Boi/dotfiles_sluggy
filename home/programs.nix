@@ -1,5 +1,5 @@
 {pkgs, ...}: {
-  home.packages = with pkgs; [
+  packages = with pkgs; [
     # CLI stuff
     # General packages for development and system management
     alacritty

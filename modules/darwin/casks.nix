@@ -16,6 +16,8 @@ _:
   "gcc"
   "gnutls"
   "make"
+  "neovim"
+  "tree-sitter"
   
 
   # Video tool and audio tools

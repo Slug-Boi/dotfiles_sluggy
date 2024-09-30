@@ -14,11 +14,11 @@
     ../../home/cocommit
     ../../home/lazygit
     ../../home/nvim
-    ../../home/wallpapers
+    #../../home/wallpapers
     
 
     ../../home/programs.nix
-    ../../home/k8.nix
+    #../../home/k8.nix
     ../../home/langs.nix
     ../../home/python3.nix
       

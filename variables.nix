@@ -1,14 +1,14 @@
 # Naming this file was one of the hardest things to do apparently. Both config, options, setting and args were already taken.
 # So yes, it's a stupid name, but i can't be arsed anymore
 let
-  username = "sluggy";
+  username = "karpe";
   homeDirectory = builtins.toPath "/home/${username}";
 in {
   inherit username;
 
   homeDirectory = {
     path = homeDirectory;
-    directories = ["Documents" "Downloads" "Music" "Pictures" "Videos"];
+    directories = ["Applications" "Documents" "Downloads" "Music" "Movies" "Pictures" "Sites"];
   };
 
   git = {
@@ -16,9 +16,9 @@ in {
     email = "theis.p.holm@gmail.com";
   };
 
-  dotfilesLocation = homeDirectory + (builtins.toPath "/Documents/Coding/Other/dotfiles");
+  dotfilesLocation = homeDirectory + (builtins.toPath "/Documents/dotfiles");
 
-  initialPassword = "changeme";
+  #initialPassword = "changeme";
 
-  stateVersion = "23.11";
+  #stateVersion = "23.11";
 }

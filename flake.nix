@@ -86,8 +86,8 @@
       darwinConfigurations = nixpkgs.lib.genAttrs darwinSystems (system: let
         user = "karpe";  
         args = {
-          variables = import ../../variables.nix;
-          # theme = import ../../theme.nix;
+          variables = import ./variables.nix;
+          theme = import ./theme.nix;
         }//inputs;
         in
         darwin.lib.darwinSystem {

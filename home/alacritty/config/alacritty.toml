@@ -1,0 +1,15 @@
+import = ["~/.config/alacritty/themes/theme.toml"]
+
+[font.bold]
+family = "FiraCode Nerd Font"
+style = "Bold"
+
+[font.normal]
+family = "FiraCode Nerd Font"
+style = "Regular"
+
+[[keyboard.bindings]]
+action = "ToggleFullscreen"
+key = "Return"
+mods = "Command"
+

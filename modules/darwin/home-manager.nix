@@ -1,10 +1,7 @@
-{ config, pkgs, pkgs-unstable, lib, home-manager, ... }:
+{ config, pkgs, pkgs-unstable, lib, home-manager, specialArgs, ... }:
 
 let
   user = "karpe";
-  # args = {
-  #   variables = import ../../variables.nix;
-  # };
 in
 {
   imports = [
@@ -48,11 +45,13 @@ in
   home-manager = {
     
     useGlobalPkgs = true;
+
+    extraSpecialArgs = specialArgs;
     
     users.${user} = { pkgs, config, lib, ... }:
     {
     imports = [
-        ../shared/home.nix
+        ../shared/home.nix 
       ];
       home = {
         enableNixpkgsReleaseCheck = false;

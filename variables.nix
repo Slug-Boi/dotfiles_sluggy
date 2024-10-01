@@ -2,7 +2,7 @@
 # So yes, it's a stupid name, but i can't be arsed anymore
 let
   username = "karpe";
-  homeDirectory = builtins.toPath "/home/${username}";
+  homeDirectory = builtins.toPath "/Users/${username}";
 in {
   inherit username;
 

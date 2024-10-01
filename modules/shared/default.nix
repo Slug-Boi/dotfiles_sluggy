@@ -7,9 +7,9 @@
       allowBroken = true;
       allowInsecure = false;
       allowUnsupportedSystem = true;
-      # packageOverrides = pkgs: {
-      #   unstable = import (fetchTarball "https://github.com/NixOS/nixpkgs/archive/nixos-unstable.tar.gz") {};
-      # };
+      packageOverrides = pkgs: {
+        unstable = import (fetchTarball "https://github.com/NixOS/nixpkgs/archive/nixos-unstable.tar.gz") {};
+      };
     };
     #pkgs-unstable = import (fetchTarball "https://github.com/NixOS/nixpkgs/archive/nixos-unstable.tar.gz") {};
 

@@ -6,16 +6,19 @@
 #    https://github.com/yannbertrand/macos-defaults
 
 let 
-  user = "karpe"
+  user = "karpe";
+  # specialArgs = {
+  #   inherit variables;
+  # };
   # args = {
-  #   variables = import ../../variables.nix;
-  #   theme = import ../../theme.nix;
-  # }
-; in
+  #   variables = import ./variables.nix;
+  #   #theme = import ../../theme.nix;
+  # };
+in
 
 { 
     imports = [
-    ../../modules/darwin/home-manager.nix 
+    ../../modules/darwin/home-manager.nix
     ../../modules/shared 
   ];
 
@@ -84,6 +87,8 @@ let
 
       NSGlobalDomain = {
 
+        _HIHideMenuBar = true; # hide menu bar
+
         AppleShowAllExtensions = true;
 
         KeyRepeat = 2; # Values: 120, 90, 60, 30, 12, 6, 2
@@ -92,6 +97,7 @@ let
         "com.apple.mouse.tapBehavior" = 1;
         "com.apple.sound.beep.volume" = 0.0;
         "com.apple.sound.beep.feedback" = 0;
+        "com.apple.keyboard.fnState" = true;
 
         # Appearance
         AppleInterfaceStyle = "Dark"; # dark mode

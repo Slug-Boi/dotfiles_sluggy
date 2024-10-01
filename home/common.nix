@@ -4,7 +4,7 @@
   ...
 }: {
   home = {
-    inherit (variables) username stateVersion;
+    inherit (variables) username;
     homeDirectory = variables.homeDirectory.path;
 
     activation = {

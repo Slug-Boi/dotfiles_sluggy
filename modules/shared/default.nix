@@ -13,9 +13,6 @@
     };
     #pkgs-unstable = import (fetchTarball "https://github.com/NixOS/nixpkgs/archive/nixos-unstable.tar.gz") {};
 
-    variables = import ../../variables.nix;
-    theme = import ../../theme.nix;
-
     overlays =
       # Apply each overlay found in the /overlays directory
       let path = ../../overlays; in with builtins;

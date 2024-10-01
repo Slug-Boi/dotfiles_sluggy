@@ -1,6 +1,10 @@
 {
   description = "Starter Configuration for MacOS and NixOS";
 
+  nixConfig = {
+    experimental-features = ["nix-command" "flakes"];
+  };
+
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
@@ -30,14 +34,11 @@
     };
   }; 
 
+
+ 
+  
   outputs = { self, darwin, nix-homebrew, homebrew-bundle, homebrew-core, homebrew-cask, home-manager, nixpkgs, nixpkgs-unstable, disko } @inputs:
     let
-      args = {
-        variables = import ./variables.nix;
-        theme = import ./theme.nix;
-      }
-      //inputs;
-
       user = "karpe";
       linuxSystems = [ "x86_64-linux" "aarch64-linux" ];
       darwinSystems = [ "aarch64-darwin" "x86_64-darwin" ];
@@ -76,21 +77,27 @@
         "check-keys" = mkApp "check-keys" system;
         "rollback" = mkApp "rollback" system;
       };
+        #theme = import ./theme.nix;
     in
     {
       devShells = forAllSystems devShell;
       apps = nixpkgs.lib.genAttrs linuxSystems mkLinuxApps // nixpkgs.lib.genAttrs darwinSystems mkDarwinApps;
 
       darwinConfigurations = nixpkgs.lib.genAttrs darwinSystems (system: let
-        user = "karpe";
-
-
-      in
+        user = "karpe";  
+        args = {
+          variables = import ../../variables.nix;
+          # theme = import ../../theme.nix;
+        }//inputs;
+        in
         darwin.lib.darwinSystem {
+        
           inherit system;
-          specialArgs = inputs;
+          specialArgs = args;
           modules = [
-            home-manager.darwinModules.home-manager 
+            home-manager.darwinModules.home-manager {
+                home-manager.extraSpecialArgs = args;
+            }
             nix-homebrew.darwinModules.nix-homebrew 
             {
               #inherit args;
@@ -105,8 +112,8 @@
                 mutableTaps = false;
                 autoMigrate = true;
               };
-            }
-            ./hosts/darwin
+            } 
+            ./hosts/darwin 
           ]; 
         }
         );

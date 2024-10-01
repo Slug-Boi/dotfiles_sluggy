@@ -37,9 +37,9 @@
     poppler
 
     # Node.js development tools
-    nodePackages.npm # globally install npm
-    nodePackages.prettier
-    nodejs
+    # nodePackages.npm # globally install npm
+    # nodePackages.prettier
+    # nodejs
 
     # Text and terminal utilities
     jq

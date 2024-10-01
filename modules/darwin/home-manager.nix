@@ -1,9 +1,10 @@
-{ config, pkgs, pkgs-unstable, lib, home-manager, variables, theme, ... }:
+{ config, pkgs, pkgs-unstable, lib, home-manager, ... }:
 
 let
   user = "karpe";
- 
-  # Define the content of your file as a derivation
+  # args = {
+  #   variables = import ../../variables.nix;
+  # };
 in
 {
   imports = [
@@ -45,12 +46,14 @@ in
 
   # Enable home-manager
   home-manager = {
-
+    
     useGlobalPkgs = true;
-    users.${user} = { pkgs, config, lib, ... }:{
-      imports = [
+    
+    users.${user} = { pkgs, config, lib, ... }:
+    {
+    imports = [
         ../shared/home.nix
-      ] {inherit variables theme;};
+      ];
       home = {
         enableNixpkgsReleaseCheck = false;
         packages = pkgs.callPackage ./packages.nix {};

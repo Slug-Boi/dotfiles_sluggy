@@ -28,7 +28,7 @@
 in {
   home.packages = with pkgs; [
     poetry
-    poppler_utils
+    #poppler_utils
 
     ((python3.withPackages python-packages).override (args: {ignoreCollisions = true;}))
   ];

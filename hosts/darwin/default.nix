@@ -6,20 +6,17 @@
 #    https://github.com/yannbertrand/macos-defaults
 
 let 
-user = "karpe"
-
+  user = "karpe"
+  # args = {
+  #   variables = import ../../variables.nix;
+  #   theme = import ../../theme.nix;
+  # }
 ; in
 
-{
-
-  variables = import ../../variables.nix;
-  theme = import ../../theme.nix;
-
-
-  imports = [
+{ 
+    imports = [
     ../../modules/darwin/home-manager.nix 
-    ../../modules/shared
-    
+    ../../modules/shared 
   ];
 
   services.nix-daemon.enable = true;

@@ -2,31 +2,31 @@ _:
 
 [
   # Tiling wm for macOS
-  "aerospace"
-  "borders"
+  #"aerospace"
+  #"borders"
 
   # Workflow Tools
-  "dagger"
+  #"dagger"
 
   # Development Tools
-  "homebrew/cask/docker"
-  "visual-studio-code"
-  "emacs-plus@29"
-  "cmake"
-  "gcc"
-  "gnutls"
-  "make"
-  "neovim"
-  "tree-sitter"
+  #"homebrew/cask/docker"
+  #"visual-studio-code"
+  # "emacs-plus@29"
+  # "cmake"
+  # "gcc"
+  # "gnutls"
+  # "make"
+  # "neovim"
+  # "tree-sitter"
   
 
   # Video tool and audio tools
-  "flac"
-  "handbrake"
-  "ffmpeg"
+  #"flac"
+  #"handbrake"
+  #"ffmpeg"
 
   # Communication Tools
-  "ca-certificates"
+  #"ca-certificates"
   #"discord"
   #"notion"
   #"zoom"
@@ -36,7 +36,7 @@ _:
   # Entertainment Tools
 
   # Productivity Tools
-  "raycast"
+  #"raycast"
 
    # Usage:
    #TODO: Maybe intergrate this into the system

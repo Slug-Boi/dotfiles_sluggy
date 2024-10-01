@@ -41,6 +41,9 @@
     # nodePackages.prettier
     # nodejs
 
+    # Darwin 
+    dockutil
+
     # Text and terminal utilities
     jq
     ripgrep

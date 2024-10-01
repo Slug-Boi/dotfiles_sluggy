@@ -16,7 +16,7 @@ in {
     email = "github.unshipped609@slmail.me";
   };
 
-  dotfilesLocation = homeDirectory + (builtins.toPath "/Documents/dotfiles");
+  dotfilesLocation = homeDirectory + (builtins.toPath "/Documents/dotfiles_sluggy");
 
   #initialPassword = "changeme";
 

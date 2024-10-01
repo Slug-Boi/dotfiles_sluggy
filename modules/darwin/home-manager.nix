@@ -21,8 +21,8 @@ in
 
     # Custom taps 
     taps = [
-       "nikitabobko/tap"
-       "FelixKratz/formulae"
+       # "nikitabobko/tap"
+       # "FelixKratz/formulae"
     ];
     casks = pkgs.callPackage ./casks.nix {};
     

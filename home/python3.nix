@@ -13,6 +13,7 @@
       pdf2image
       pillow
       pytesseract
+      pycurl
       
       # Pretty stuff
       halo

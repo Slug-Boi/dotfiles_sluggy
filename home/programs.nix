@@ -15,6 +15,7 @@
     zip
     mosh
     zoxide
+    devenv
 
     # Encryption and security tools
     #age

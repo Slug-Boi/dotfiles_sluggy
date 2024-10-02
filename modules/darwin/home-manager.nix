@@ -41,8 +41,14 @@ in
     # This message is safe to ignore. (https://github.com/dustinlyons/nixos-config/issues/83)
   };
 
+  environment.systemPackages = with pkgs; [
+      devenv
+  ];
+
   # Enable home-manager
   home-manager = {
+
+    
     
     useGlobalPkgs = true;
 

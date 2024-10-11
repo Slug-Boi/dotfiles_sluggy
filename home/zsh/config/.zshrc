@@ -110,8 +110,8 @@ alias rc="nvim ~/.zshrc"
 alias emacs="doom run"
 
 # ProgrammerSomData aliases
-alias fslex="dotnet ~/Documents/ITU/5._Semester/ProgramsAsData/ProgramsAsDataCodeE2024/fsharp/fslex.dll"
-alias fsyacc="dotnet ~/Documents/ITU/5._Semester/ProgramsAsData/ProgramsAsDataCodeE2024/fsharp/fsyacc.dll"
+alias fslex="dotnet ~/Documents/ITU/5._Semester/PGSD/ProgramsAsDataCodeE2024/fsharp/fslex.dll"
+alias fsyacc="dotnet ~/Documents/ITU/5._Semester/PGSD/ProgramsAsDataCodeE2024/fsharp/fsyacc.dll"
 
 # yt-dl
 alias yt-dl='~/Applications/yt-dlp_macos'
@@ -121,5 +121,6 @@ alias python=python3
 alias pip=pip3
 
 # Shell integrations
+# Remember for zoxide if you <SPACE><TAB> it will give options for jumping
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"

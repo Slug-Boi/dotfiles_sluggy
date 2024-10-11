@@ -7,13 +7,13 @@ local github = sbar.add("item", constants.items.GITHUB, {
   position = "right",
   icon = {
     string = settings.icons.text.github.logo,
-    padding_right = -10,
+    padding_right = 0,
     font = {
       style = settings.fonts.styles.bold
     },
     label = {
       string = "github",
-      padding_right = 10,
+      padding_right = 0,
     },
   }
 })
@@ -63,9 +63,9 @@ local function toggleDetails()
   end
 end
 
-local function launch()
-  sbar.exec("open -u https://github.com/Slug-Boi")
-end
+-- local function launch()
+--   sbar.exec("open -u https://github.com/Slug-Boi")
+-- end
 
 
 github:subscribe("mouse.clicked", function(env)
@@ -83,5 +83,13 @@ github:subscribe("mouse.clicked", function(env)
   end
 end)
 
+local function openProfile(env)
+  sbar.exec("open -u https://github.com/Slug-Boi")
+  hideDetails()
+end
+
+
+profile:subscribe("mouse.clicked", openProfile)
+
 -- doesn't work for some reason
-profile:subscribe("mouse.clicked", launch())
+--profile:subscribe("mouse.clicked", launch())

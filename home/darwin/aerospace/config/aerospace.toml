@@ -58,7 +58,7 @@ on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
 inner.horizontal = 7
 inner.vertical =   7
 outer.left =       7
-outer.bottom =     7
+outer.bottom =     4
 outer.top =        30
 outer.right =      7
 
@@ -102,6 +102,8 @@ alt-7 = 'layout tiles horizontal vertical'
 alt-comma = 'layout accordion horizontal vertical'
 
 alt-f = 'fullscreen'
+shift-alt-f = 'macos-native-fullscreen'
+
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#focus
 cmd-h = 'focus left'

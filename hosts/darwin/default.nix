@@ -136,7 +136,7 @@ in
       trackpad = {
         Clicking = true;
         TrackpadRightClick = true; 
-        TrackpadThreeFingerDrag = true;
+        TrackpadThreeFingerDrag = false;
       };
 
        # customize settings that not supported by nix-darwin directly

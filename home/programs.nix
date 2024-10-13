@@ -16,6 +16,7 @@
     mosh
     zoxide
     devenv
+    pop
 
     # Encryption and security tools
     #age

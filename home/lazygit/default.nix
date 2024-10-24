@@ -6,6 +6,7 @@
 }: {
   home.packages = with pkgs; [
     lazygit
+    cz-cli
   ];
 
   xdg.configFile.lazygit = {

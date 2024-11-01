@@ -9,7 +9,7 @@ return {
             copy = "#f5c359",
             delete = "#c75c6a",
             insert = "#78ccc5",
-            visual = "#e77e7f",
+            visual = "#7ebbb2",
           },
 
           -- Set opacity for cursorline and number background

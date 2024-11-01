@@ -6,7 +6,7 @@
 }: {
   home.packages = with pkgs; [
     lazygit
-    cz-cli
+    commitizen
   ];
 
   xdg.configFile.lazygit = {

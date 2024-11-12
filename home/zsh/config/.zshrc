@@ -124,3 +124,7 @@ alias pip=pip3
 # Remember for zoxide if you <SPACE><TAB> it will give options for jumping
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
+
+# fzf-sourcing
+source /nix/store/*-fzf-*/share/fzf/key-bindings.zsh
+source /nix/store/*-fzf-*/share/fzf/completion.zsh

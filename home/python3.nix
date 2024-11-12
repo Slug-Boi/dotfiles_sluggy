@@ -17,6 +17,7 @@
       
       # Pretty stuff
       halo
+      #manim
 
       # Database
       mysql-connector
@@ -32,5 +33,6 @@ in {
     #poppler_utils
 
     ((python3.withPackages python-packages).override (args: {ignoreCollisions = true;}))
+    #manim
   ];
 }

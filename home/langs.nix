@@ -3,10 +3,10 @@
     #dotnet-sdk_7
     dotnetCorePackages.sdk_8_0_3xx
 
-    #nodejs-18_x
-    nodePackages.npm # globally install npm
-    nodePackages.prettier
-    nodejs
+    #nodejs_22
+    llvm_18
+    darwin.libresolv
+    darwin.libresolvHeaders
 
     # Go
     go
@@ -32,5 +32,7 @@
 
     # C compiler
     #libgcc
+    #gccgo
+    gsl
   ];
 }

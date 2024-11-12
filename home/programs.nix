@@ -17,6 +17,7 @@
     zoxide
     devenv
     pop
+    slack
 
     # Encryption and security tools
     #age
@@ -37,11 +38,6 @@
     fd
     pandoc
     poppler
-
-    # Node.js development tools
-    # nodePackages.npm # globally install npm
-    # nodePackages.prettier
-    # nodejs
 
     # Darwin 
     dockutil

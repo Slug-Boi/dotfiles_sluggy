@@ -24,6 +24,7 @@ _:
   #"flac"
   #"handbrake"
   #"ffmpeg"
+  #"manim"
 
   # Communication Tools
   #"ca-certificates"

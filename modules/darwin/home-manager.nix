@@ -78,7 +78,7 @@ in
   # Fully declarative dock using the latest from Nix Store
   local.dock.enable = true;
   local.dock.entries = [
-    { path = "/System/Library/CoreServices/Finder.app"; }
+    #{ path = "/System/Library/CoreServices/Finder.app"; }
     { path = "/Applications/Firefox Nightly.app"; }
     { path = "/Applications/Spotify.app/"; }
     { path = "/System/Applications/App Store.app"; }

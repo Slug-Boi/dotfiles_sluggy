@@ -13,6 +13,7 @@
      ../../home/git
      #../../home/kitty
     ../../home/zsh
+    ../../home/ranger
     ../../home/cocommit
     ../../home/lazygit
     ../../home/nvim 

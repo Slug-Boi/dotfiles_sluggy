@@ -7,3 +7,4 @@ result
 
 *.qcow2
 *.iso
+home/ranger/config/plugins/__pycache__

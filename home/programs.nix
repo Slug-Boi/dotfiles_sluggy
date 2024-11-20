@@ -18,6 +18,7 @@
     devenv
     pop
     slack
+    pdfgrep
 
     # Encryption and security tools
     #age
@@ -28,6 +29,7 @@
     # Development tools
     protobuf
     tesseract
+    sqlite
 
     # Cloud-related tools and SDKs
     docker
@@ -38,6 +40,7 @@
     fd
     pandoc
     poppler
+    asciinema
 
     # Darwin 
     dockutil

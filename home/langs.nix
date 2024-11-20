@@ -3,7 +3,7 @@
     #dotnet-sdk_7
     dotnetCorePackages.sdk_8_0_3xx
 
-    #nodejs_22
+    nodejs_22
     llvm_18
     darwin.libresolv
     darwin.libresolvHeaders
@@ -32,7 +32,6 @@
 
     # C compiler
     #libgcc
-    #gccgo
     gsl
   ];
 }

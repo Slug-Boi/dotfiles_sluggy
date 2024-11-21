@@ -4,6 +4,7 @@
     # General packages for development and system management
     alacritty
     bat
+    eza
     act
     btop
     coreutils

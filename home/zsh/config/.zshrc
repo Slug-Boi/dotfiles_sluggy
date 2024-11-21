@@ -95,10 +95,16 @@ zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
 # Aliases
 # move commands
-alias ~="cd ~"
+alias ~="cd"
+alias z="zoxide"
+function cs() {
+  cd $1
+  eza 
+}
 # ls
-alias ll='ls --color -alF'
-alias ls='ls --color'
+alias ll='eza --color -alF'
+alias ls='eza --color'
+
 
 # custom bash scripts
 alias ntfy="/Users/karpe/Documents/bash_scripts/ntfy.sh"

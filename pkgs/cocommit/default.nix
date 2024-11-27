@@ -1,35 +1,31 @@
 {lib, buildGoModule, fetchFromGitHub }:
-
 buildGoModule rec {
 
-
   pname = "cocommit";
-  version = "0.3.0";
+  version = "1.0.1";
 
   src = fetchFromGitHub {
     owner = "Slug-Boi";
     repo = pname;
     rev = "v${version}";
-    sha256 = "sha256-oraadDCyek8qnXFZPj2yitXL3KPK+uW1/VZphrEa/MU=";
+    sha256 = "sha256-TaKr7/IlWdKBZNpmoo4HxMSPAVXET0zCxKHlKqc5PdE=";
   };
 
-  vendorHash = null;
-
+  vendorHash = "sha256-WLbsH/T99Mdk9IzSTUaXGT2vhIKcjSMbQaXQtt3K040=";
+  
 
   #TODO: Make this not use a makefile instead just use a gobuild cmd
   buildPhase = ''
-    make build-nix
+    go build -C src -o cocommit 
   '';
   
   doCheck = false;
 
   installPhase = ''
     mkdir -p $out/bin
-    cp "src_code/go_src/${pname}" "$out/bin/${pname}"
+    cp "src/${pname}" "$out/bin/${pname}"
     chmod +x $out/bin/${pname}
   '';
-
-  makefile = "makefile";
 
   meta = with lib; {
     description = "Cocommit is a CLI that makes it easier to co-author users on git commits";

@@ -10,8 +10,8 @@
 
 
     ../../home/alacritty
-     ../../home/git
-     #../../home/kitty
+    ../../home/git
+    #../../home/kitty
     ../../home/zsh
     ../../home/yazi
     ../../home/cocommit

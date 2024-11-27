@@ -45,10 +45,11 @@ in
       devenv
   ];
 
+  environment.variables = {
+    EZA_CONFIG_DIR = "$HOME/.config/yazi";
+  };
   # Enable home-manager
-  home-manager = {
-
-    
+  home-manager = {   
     
     useGlobalPkgs = true;
 

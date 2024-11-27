@@ -1,16 +1,21 @@
 {
-  pkgs-unstable,
+  pkgs,
   config,
   variables,
   ...
 }: {
-  home.packages = with pkgs-unstable; [
+  home.packages = with pkgs; [
     yazi
-    poppler_utils
     ueberzugpp
-  ];
 
+    # req plugins
+    ffmpegthumbnailer
+    mediainfo
+  ];
+  
   xdg.configFile.yazi = {
     source = config.lib.file.mkOutOfStoreSymlink "${variables.dotfilesLocation}" + (builtins.toPath "/home/yazi/config");
+    
   };
-}
+
+ }

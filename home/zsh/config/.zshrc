@@ -94,11 +94,22 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
 # Aliases
+# Files
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		builtin cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+}
+
 # move commands
 alias ~="cd"
-alias z="zoxide"
+#alias cd="cd"
+#alias z="zoxide"
 function cs() {
-  cd $1
+  j $@
   eza 
 }
 # ls
@@ -113,7 +124,7 @@ alias slidestomd="~/Documents/bash_scripts/slidestomd.sh"
 alias svg-term="/usr/local/Cellar/node/23.2.0/lib/node_modules/svg-term-cli/lib/cli.js"
 
 # quick edits and editors
-alias rc="nvim ~/.zshrc"
+alias rc="nvim ~/Documents/dotfiles_sluggy/home/zsh/config/.zshrc"
 alias emacs="doom run"
 
 # ProgrammerSomData aliases
@@ -130,7 +141,7 @@ alias pip=pip3
 # Shell integrations
 # Remember for zoxide if you <SPACE><TAB> it will give options for jumping
 eval "$(fzf --zsh)"
-eval "$(zoxide init --cmd cd zsh)"
+eval "$(zoxide init zsh --cmd j)"
 
 # fzf-sourcing
 source /nix/store/*-fzf-*/share/fzf/key-bindings.zsh

@@ -18,6 +18,7 @@
     zoxide
     devenv
     pop
+    glow
     slack
     pdfgrep
 
@@ -31,6 +32,7 @@
     protobuf
     tesseract
     sqlite
+    nix-prefetch
 
     # Cloud-related tools and SDKs
     docker
@@ -42,6 +44,7 @@
     pandoc
     poppler
     asciinema
+    imagemagick_light
 
     # Darwin 
     dockutil
@@ -55,7 +58,6 @@
     unzip
     zsh-powerlevel10k
     fzf
-    yazi
 
   ];
 }

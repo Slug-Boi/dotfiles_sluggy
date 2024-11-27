@@ -6,8 +6,9 @@
     ../../home/dunst
     ../../home/fish
     ../../home/git
-    ../../home/i3
-    ../../home/kitty
+    #../../home/i3
+    #../../home/kitty
+    ../../home/hyprland
     ../../home/lazygit
     ../../home/nvim
     (import ../../home/picom {nvidiaDrivers = true;})

@@ -1,3 +1,6 @@
+# Contribution/Origin
+This respository is heavily inspired and originates from the great dotfiles of [albe2669](https://github.com/albe2669/dotfiles). The dotfiles have at this point devaited enough that I have decided to detach them as a seperate repo. But all credit for a whole lot of this goes to my lovely boi Albert :) 
+
 # My .dotfiles and NixOS configuration
 
 ## What is this?

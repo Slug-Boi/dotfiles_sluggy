@@ -21,6 +21,7 @@
     glow
     slack
     pdfgrep
+    ripgrep
 
     # Encryption and security tools
     #age
@@ -45,6 +46,7 @@
     poppler
     asciinema
     imagemagick_light
+    zotero
 
     # Darwin 
     dockutil

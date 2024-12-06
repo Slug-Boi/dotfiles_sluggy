@@ -73,6 +73,61 @@ on   = "F"
 run  = "plugin smart-filter"
 desc = "Smart filter"
 
+[[manager.prepend_keymap]]
+on = [ "<S-t>","1" ]
+run = "tab_switch 0"
+desc = "Switch to tab 1"
+
+[[manager.prepend_keymap]]
+on = [ "<S-t>","2" ]
+run = "tab_switch 1"
+desc = "Switch to tab 2"
+
+[[manager.prepend_keymap]]
+on = [ "<S-t>","3" ]
+run = "tab_switch 2"
+desc = "Switch to tab 3"
+
+[[manager.prepend_keymap]]
+on = [ "<S-t>","4" ]
+run = "tab_switch 3"
+desc = "Switch to tab 4"
+
+[[manager.prepend_keymap]]
+on = [ "<S-t>","5" ]
+run = "tab_switch 4"
+desc = "Switch to tab 5"
+
+[[manager.prepend_keymap]]
+on = [ "<S-t>","6" ]
+run = "tab_switch 5"
+desc = "Switch to tab 6"
+
+[[manager.prepend_keymap]]
+on = [ "<S-t>","7" ]
+run = "tab_switch 6"
+desc = "Switch to tab 7"
+
+[[manager.prepend_keymap]]
+on = [ "<S-t>","8" ]
+run = "tab_switch 7"
+desc = "Switch to tab 8"
+
+[[manager.prepend_keymap]]
+on = [ "<S-t>","9" ]
+run = "tab_switch 8"
+desc = "Switch to tab 9"
+
+[[manager.prepend_keymap]]
+on = "("
+run = "tab_switch --args=prev"
+desc = "Switch to previous tab"
+
+[[manager.prepend_keymap]]
+on = ")"
+run = "tab_switch --args=next"
+desc = "Switch to next tab"
+
 # Toggle views
 [[manager.prepend_keymap]]
 on = "<C-1>"

@@ -11,6 +11,7 @@
     # req plugins
     ffmpegthumbnailer
     mediainfo
+    clipboard-jh
   ];
   
   xdg.configFile.yazi = {

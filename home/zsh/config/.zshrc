@@ -118,7 +118,7 @@ alias ls='eza --color'
 
 
 # custom bash scripts
-alias ntfy="/Users/karpe/Documents/bash_scripts/ntfy.sh"
+alias ntfy="/Users/slugboi/Documents/bash_scripts/ntfy.sh"
 alias cogo="~/Documents/bash_scripts/cocommit"
 alias slidestomd="~/Documents/bash_scripts/slidestomd.sh"
 alias svg-term="/usr/local/Cellar/node/23.2.0/lib/node_modules/svg-term-cli/lib/cli.js"

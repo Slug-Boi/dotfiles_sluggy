@@ -1,11 +1,15 @@
 
 [font.bold]
-family = "FiraCode Nerd Font"
+family = "IosevkaTerm Nerd Font"
 style = "Bold"
 
 [font.normal]
-family = "FiraCode Nerd Font"
+family = "IosevkaTerm Nerd Font"
 style = "Regular"
+
+[font.italic]
+family = "IosevkaTerm Nerd Font"
+style = "Italic"
 
 [[keyboard.bindings]]
 action = "ToggleFullscreen"

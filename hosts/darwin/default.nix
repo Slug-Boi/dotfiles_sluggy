@@ -6,7 +6,7 @@
 #    https://github.com/yannbertrand/macos-defaults
 
 let 
-  user = "karpe";
+  user = "slugboi";
   # specialArgs = {
   #   inherit variables;
   # };

@@ -2,7 +2,7 @@
 
 # TODO: Change to variables file
 let name = "Slug-Boi";
-    user = "karpe";
+    user = "slugboi";
     email = "github.unshipped609@slmail.me"; in
 {
   # Shared shell configuration

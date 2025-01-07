@@ -1,7 +1,7 @@
 { config, pkgs, pkgs-unstable, lib, home-manager, specialArgs, ... }:
 
 let
-  user = "karpe";
+  user = "slugboi";
 in
 {
   imports = [

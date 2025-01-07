@@ -4,7 +4,6 @@
     # Darwin specific imports probably move
 
     ../../home/common.nix
-    ../../home/darwin/raycast
     ../../home/darwin/aerospace
     ../../home/darwin/sketchybar
 

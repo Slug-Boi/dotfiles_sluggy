@@ -1,4 +1,9 @@
 _:
 [
- "nikitabobko/tap/aerospace"
+ "aerospace"
+ "raycast"
+ "miniconda"
+ "notion"
+ "zen-browser"
+ "docker"
 ]

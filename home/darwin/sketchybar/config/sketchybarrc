@@ -1,3 +1,114 @@
-#!/usr/bin/env lua
+COLOR=0xFFa3be8c
+BACKGROUND_COLOR=0xEB2e3440
 
-require("init")
+sketchybar --bar height=54        \
+                 margin=12        \
+                 y_offset=-7       \
+                 padding_left=0   \
+                 padding_right=0  \
+                 color=0x00000000
+
+sketchybar --default updates=when_shown                             \
+                     icon.font="IosevkaTerm Nerd Font:Regular:12"  \
+                     icon.color=0xFFFFFFFF                          \
+                     label.font="IosevkaTerm Nerd Font:Regular:12" \
+                     background.color=0x00000000                    \
+                     y_offset=0
+
+SPACE_ICONS=("1" "2" "3" "4" "5" "6" "7" "8" "9" "10")
+SPACES=()
+
+for i in "${!SPACE_ICONS[@]}"
+do
+  sid=$(($i+1))
+  SPACES+=(space.$sid)
+  sketchybar --add item space.$sid left \
+             --set space.$sid icon=${SPACE_ICONS[i]} \
+                              icon.highlight_color=0xFF000000 \
+                              icon.align=center \
+                              icon.width=30 \
+                              label.drawing=off \
+                              click_script="aerospace workspace $sid" 
+done
+
+#TODO: Add workspace templates button
+
+sketchybar --add bracket spaces '/space\..*/'              \
+           --set         spaces background.color=$BACKGROUND_COLOR     \
+                                background.border_width=1              \
+                                background.border_color=$COLOR          \
+                                blur_radius=2                          \
+                                background.height=30                    \
+                                # background.shadow.drawing=true          \
+                                # background.shadow.color=0x33000000      \
+                                # background.shadow.distance=3
+                                                  
+
+sketchybar --add item highlight_space left                      \
+           --set      highlight_space width=22                  \
+                                      background.color=$COLOR    \
+                                      background.height=22      \
+                                      script='./scripts/highlight_space.sh'
+
+sketchybar --add event space_change_aerospace 
+
+sketchybar --subscribe highlight_space space_change_aerospace
+
+sketchybar --default                                                \
+                     background.color=$BACKGROUND_COLOR             \
+                     blur_radius=2                                  \
+                     background.height=30                           \
+                     icon.padding_left=12                           \
+                     icon.padding_right=4                         \
+                     label.padding_left=4                           \
+                     label.padding_right=12                         \
+                     background.padding_left=18                     \
+                     background.border_width=1
+
+sketchybar --add item settings e                                  \
+           --set      settings                                      \
+                            icon=⛭                                  \
+                            label="Settings"                      \
+                            label.padding_left=0                    \
+                            icon.padding_right=10                  \
+                            icon.font.size=25                       \
+                            background.padding_left=0               \
+                            click_script='./scripts/system_settings.sh'      \
+                            icon.color=$COLOR                    \
+                            background.border_color=$COLOR       \
+
+sketchybar --add item time right                                    \
+           --set      time icon=󱑎                                   \
+                           icon.color=$COLOR                       \
+                           background.border_color=$COLOR          \
+                           label="$(date '+%I:%M %p')"              \
+                           script='./scripts/time.sh'               \
+                           update_freq=1
+
+sketchybar --add item date right                                    \
+           --set      date icon=󱨰                                   \
+                           icon.color=$COLOR                          \
+                           background.border_color=$COLOR             \
+                           label="$(date '+%a %b %d')"              \
+                           script='./scripts/date.sh'               \
+                           update_freq=10
+
+#TODO: Extend component for github quick access
+sketchybar --add item github right                                 \
+           --set      github icon=                                \
+                              icon.color=$COLOR                    \
+                              icon.font.size=18                    \
+                              background.border_color=$COLOR       \
+                              label="Github"                        \
+                              click_script="open https://github.com" \
+
+sketchybar --add item battery right                                 \
+           --set      battery icon=                                \
+                              icon.color=$COLOR                    \
+                              background.border_color=$COLOR       \
+                              label="--%"                           \
+                              script='./scripts/battery.sh'         \
+                              update_freq=20
+
+sketchybar --hotload on
+sketchybar --update

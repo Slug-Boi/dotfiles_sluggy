@@ -14,10 +14,10 @@
       pillow
       pytesseract
       pycurl
+      pycairo
       
       # Pretty stuff
       halo
-      #manim
 
       # Database
       mysql-connector
@@ -30,8 +30,9 @@
 in {
   home.packages = with pkgs; [
     poetry
-    #poppler_utils
-
+    maturin
+    uv
+    
     ((python3.withPackages python-packages).override (args: {ignoreCollisions = true;}))
     #manim
   ];

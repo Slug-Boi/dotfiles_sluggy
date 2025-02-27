@@ -1,5 +1,74 @@
-[plugin]
-deps = [{ use = "Reledia/glow", rev = "388e847" }, { use = "dedukun/relative-motions", rev = "1d6d686" }, { use = "sharklasers996/eza-preview", rev = "7ca4c25" }, { use = "yazi-rs/plugins:smart-enter", rev = "f1fb6cc" }, { use = "yazi-rs/plugins:full-border", rev = "f1fb6cc" }, { use = "yazi-rs/plugins:chmod", rev = "f1fb6cc" }, { use = "yazi-rs/plugins:diff", rev = "f1fb6cc" }, { use = "pirafrank/what-size", rev = "f08f7f2" }, { use = "Lil-Dank/lazygit", rev = "c82794f" }, { use = "AnirudhG07/plugins-yazi:copy-file-contents", rev = "f871a9c" }, { use = "yazi-rs/plugins:smart-filter", rev = "f1fb6cc" }, { use = "yazi-rs/plugins:git", rev = "f1fb6cc" }, { use = "dawsers/toggle-view", rev = "d326a53" }, { use = "andreas-timm/sips-preview", rev = "ec73494" }, { use = "Ape/mediainfo", rev = "c69314e" }]
+[[plugin.deps]]
+use = "Reledia/glow"
+rev = "388e847"
+hash = "cb995032091f556762646936565fa516"
 
-[flavor]
-deps = [{ use = "Chromium-3-Oxide/everforest-medium", rev = "65bc09b" }]
+[[plugin.deps]]
+use = "dedukun/relative-motions"
+rev = "1d6d686"
+hash = "6bc391f506fd73ea0a45a7bae4759c13"
+
+[[plugin.deps]]
+use = "sharklasers996/eza-preview"
+rev = "7ca4c25"
+hash = "d1efd1931dd738af0d6e4f41dd491313"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:smart-enter"
+rev = "f1fb6cc"
+hash = "cfb34ebf943df6fe3406afde674d9a5b"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:full-border"
+rev = "f1fb6cc"
+hash = "3a73613fc702a5f8369791b3401f52f1"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:chmod"
+rev = "f1fb6cc"
+hash = "36c82bb433078e8e752351d961cac777"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:diff"
+rev = "f1fb6cc"
+hash = "284f6694e3b1a4afd686acf1052acd90"
+
+[[plugin.deps]]
+use = "pirafrank/what-size"
+rev = "f08f7f2"
+hash = "6de1e859aa4f9832aa00a1a65e552ea3"
+
+[[plugin.deps]]
+use = "AnirudhG07/plugins-yazi:copy-file-contents"
+rev = "f871a9c"
+hash = "5839e7f19b1c0f4e6150778821463cc9"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:smart-filter"
+rev = "f1fb6cc"
+hash = "ea24edab4a62c94dbd205adfb6f2c08d"
+
+[[plugin.deps]]
+use = "dawsers/toggle-view"
+rev = "d326a53"
+hash = "fc99d5a9e5b588e5c43c836c5d61c2ca"
+
+[[plugin.deps]]
+use = "andreas-timm/sips-preview"
+rev = "ec73494"
+hash = "4be7fad65d878edf862bf4242a44962e"
+
+[[plugin.deps]]
+use = "Ape/mediainfo"
+rev = "c69314e"
+hash = "edbf9c7a6a69c8c09b53f860fd887f5c"
+
+[[plugin.deps]]
+use = "Lil-Dank/lazygit"
+rev = "9f924e3"
+hash = "2b0c33928986f126d5c5a4cac31a6b46"
+
+[[flavor.deps]]
+use = "Chromium-3-Oxide/everforest-medium"
+rev = "65bc09b"
+hash = "d610b54f3b9fb8a3f60821d424917e8b"

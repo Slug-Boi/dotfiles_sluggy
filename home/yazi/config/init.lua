@@ -14,4 +14,3 @@ require("copy-file-contents"):setup({
   notification = true,
 })
 
-require("git"):setup()

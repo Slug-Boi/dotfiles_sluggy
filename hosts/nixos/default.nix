@@ -5,7 +5,7 @@ let user = "karpe";
 {
   imports = [
     ../../modules/nixos/disk-config.nix
-    ../../modules/shared
+    #../../modules/shared
   ];
 
   # Use the systemd-boot EFI boot loader.

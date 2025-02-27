@@ -8,6 +8,10 @@ in
    ./dock
   ];
 
+  # vim = {
+  #   enable = true;
+  # };
+
   # It me
   users.users.${user} = {
     name = "${user}";
@@ -21,7 +25,7 @@ in
     brews = pkgs.callPackage ../../home/brews/brew.nix {};
     casks = pkgs.callPackage ../../home/casks/cask.nix {};
     
-    onActivation.cleanup = "uninstall";
+    # onActivation.cleanup = "uninstall";
 
 
     # These app IDs are from using the mas CLI app
@@ -53,7 +57,7 @@ in
     users.${user} = { pkgs, config, lib, ... }:
     {
     imports = [
-        ../shared/home.nix 
+        ./home.nix 
       ];
       home = {
         enableNixpkgsReleaseCheck = false;
@@ -69,12 +73,11 @@ in
           nix-direnv.enable = true;
     };
 
-      } // import ../shared/home-manager.nix { inherit config pkgs lib; };
-
+      #manual.manpages.enable = false;
+      }; 
 
       # Marked broken Oct 20, 2022 check later to remove this
       # https://github.com/nix-community/home-manager/issues/3344
-      manual.manpages.enable = false;
     };
   };
 

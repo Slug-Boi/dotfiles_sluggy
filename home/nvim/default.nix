@@ -5,6 +5,8 @@
   ...
 }: {
   home.packages = with pkgs; [
+    neovim
+    tree-sitter
     curl # for vimplug
     virtualenv
     xclip

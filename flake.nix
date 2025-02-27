@@ -28,6 +28,18 @@
       url = "github:homebrew/homebrew-cask";
       flake = false;
     };
+    homebrew-services = {
+      url = "github:homebrew/homebrew-services";
+      flake = false;
+    };
+    homebrew-aerospace = {
+      url = "github:nikitabobko/homebrew-tap";
+      flake = false;
+    };
+    homebrew-felix = {
+      url = "github:FelixKratz/homebrew-formulae";
+      flake = false;
+    };
     disko = {
       url = "github:nix-community/disko";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -37,7 +49,7 @@
 
  
   
-  outputs = { self, darwin, nix-homebrew, homebrew-bundle, homebrew-core, homebrew-cask, home-manager, nixpkgs, nixpkgs-unstable, disko } @inputs:
+  outputs = { self, darwin, nix-homebrew, homebrew-bundle, homebrew-core, homebrew-cask,homebrew-services, home-manager, homebrew-aerospace, homebrew-felix, nixpkgs, nixpkgs-unstable, disko } @inputs:
     let
       user = "slugboi";
       linuxSystems = [ "x86_64-linux" "aarch64-linux" ];
@@ -104,11 +116,16 @@
               nix-homebrew = {
                 inherit user;
                 enable = true;
+                enableRosetta = true;
                 taps = {
                   "homebrew/homebrew-core" = homebrew-core;
                   "homebrew/homebrew-cask" = homebrew-cask;
                   "homebrew/homebrew-bundle" = homebrew-bundle;
+                  "homebrew/homebrew-services" = homebrew-services;
+                  "nikitabobko/homebrew-nikitabobko" = homebrew-aerospace;
+                  "felix/homebrew-felix" = homebrew-felix;
                 };
+
                 mutableTaps = false;
                 autoMigrate = true;
               };

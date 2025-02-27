@@ -22,8 +22,6 @@ in
     ../../modules/shared 
   ];
 
-  services.nix-daemon.enable = true;
-
   nix = {
     package = pkgs.nix;
     settings = {
@@ -33,7 +31,6 @@ in
     };
 
     gc = {
-      user = "root";
       automatic = true;
       interval = { Weekday = 1; Hour = 0; Minute = 0; };
       options = "--delete-older-than 30d";
@@ -59,11 +56,13 @@ in
   #   StandardOutPath = "/tmp/emacs.out.log";
   # };
   
-  security.pam.enableSudoTouchIdAuth = true;
+  security.pam.services.sudo_local.touchIdAuth = true;
 
   time.timeZone = "Europe/Copenhagen";
 
   system = {
+
+  stateVersion = 5;
 
   keyboard = {
       enableKeyMapping = true; # enable key mapping so that we can use `option` as `control`
@@ -73,7 +72,6 @@ in
       
     };
 
-    stateVersion = 4;
 
      # activationScripts are executed every time you boot the system or run `nixos-rebuild` / `darwin-rebuild`.
     activationScripts.postUserActivation.text = ''

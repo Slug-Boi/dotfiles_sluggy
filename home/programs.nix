@@ -2,7 +2,6 @@
   home.packages = with pkgs; [
     # CLI stuff
     # General packages for development and system management
-    alacritty
     bat
     eza
     act
@@ -22,6 +21,9 @@
     slack
     pdfgrep
     ripgrep
+    gnupg
+    lazydocker
+    opentofu
 
     # Encryption and security tools
     #age
@@ -34,6 +36,8 @@
     tesseract
     sqlite
     nix-prefetch
+    gh
+    jetbrains.phpstorm
 
     # Cloud-related tools and SDKs
     docker

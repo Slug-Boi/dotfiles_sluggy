@@ -7,10 +7,9 @@
     ../../home/darwin/aerospace
     ../../home/darwin/sketchybar
 
-
-    ../../home/alacritty
+    #../../home/alacritty
     ../../home/git
-    #../../home/kitty
+    ../../home/kitty
     ../../home/zsh
     ../../home/yazi
     ../../home/cocommit

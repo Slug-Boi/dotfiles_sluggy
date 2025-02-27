@@ -7,7 +7,7 @@ in
   imports = [
    ./dock
   ];
-  
+
   # It me
   users.users.${user} = {
     name = "${user}";
@@ -18,15 +18,10 @@ in
 
   homebrew = {
     enable = true;
-
-    # Custom taps 
-    taps = [
-       # "nikitabobko/tap"
-       # "FelixKratz/formulae"
-    ];
-    casks = pkgs.callPackage ./casks.nix {};
+    brews = pkgs.callPackage ../../home/brews/brew.nix {};
+    casks = pkgs.callPackage ../../home/casks/cask.nix {};
     
-    # onActivation.cleanup = "uninstall";
+    onActivation.cleanup = "uninstall";
 
 
     # These app IDs are from using the mas CLI app
@@ -67,7 +62,14 @@ in
         ];
         stateVersion = "23.11";
       };
-      programs = {} // import ../shared/home-manager.nix { inherit config pkgs lib; };
+      programs = {
+        direnv = {
+          enable = true;
+          enableZshIntegration = true; # see note on other shells below
+          nix-direnv.enable = true;
+    };
+
+      } // import ../shared/home-manager.nix { inherit config pkgs lib; };
 
 
       # Marked broken Oct 20, 2022 check later to remove this
@@ -85,9 +87,8 @@ in
     { path = "/System/Applications/App Store.app"; }
     { path = "/System/Applications/System Settings.app"; }
     { path = "/Applications/Discord.app/"; }
-    { path = "/Applications/Notion.app/"; }
     { path = "/Applications/Visual Studio Code.app"; }
-    { path = "${pkgs.alacritty}/Applications/Alacritty.app/"; }
+    #{ path = "${pkgs.alacritty}/Applications/Alacritty.app/"; }
     { path = "/Applications/Microsoft Outlook.app"; }
     { path = "/System/Applications/Calendar.app"; }
     ];

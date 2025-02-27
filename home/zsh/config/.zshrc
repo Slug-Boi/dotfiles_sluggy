@@ -122,14 +122,15 @@ alias ntfy="/Users/slugboi/Documents/bash_scripts/ntfy.sh"
 alias cogo="~/Documents/bash_scripts/cocommit"
 alias slidestomd="~/Documents/bash_scripts/slidestomd.sh"
 alias svg-term="/usr/local/Cellar/node/23.2.0/lib/node_modules/svg-term-cli/lib/cli.js"
+export XDG_CONFIG_HOME="$HOME/.config"
 
 # quick edits and editors
 alias rc="nvim ~/Documents/dotfiles_sluggy/home/zsh/config/.zshrc"
 alias emacs="doom run"
 
 # ProgrammerSomData aliases
-alias fslex="dotnet ~/Documents/ITU/5._Semester/PGSD/ProgramsAsDataCodeE2024/fsharp/fslex.dll"
-alias fsyacc="dotnet ~/Documents/ITU/5._Semester/PGSD/ProgramsAsDataCodeE2024/fsharp/fsyacc.dll"
+alias fslex="dotnet ~/Documents/ITU/5_sem/PGSD/ProgramsAsDataCodeE2024/fsharp/fslex.dll"
+alias fsyacc="dotnet ~/Documents/ITU/5_sem/PGSD/ProgramsAsDataCodeE2024/fsharp/fsyacc.dll"
 
 # yt-dl
 alias yt-dl='~/Applications/yt-dlp_macos'
@@ -142,6 +143,9 @@ alias pip=pip3
 # Remember for zoxide if you <SPACE><TAB> it will give options for jumping
 eval "$(fzf --zsh)"
 eval "$(zoxide init zsh --cmd j)"
+
+# direnv
+eval "$(direnv hook zsh)"
 
 # fzf-sourcing
 source /nix/store/*-fzf-*/share/fzf/key-bindings.zsh

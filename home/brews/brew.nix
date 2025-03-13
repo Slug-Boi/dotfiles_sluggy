@@ -9,4 +9,6 @@ _:
 "dagger"
 "borders"
 "sketchybar"
+"gnupg"
+"pinentry-touchid"
 ]

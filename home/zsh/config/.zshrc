@@ -147,6 +147,9 @@ eval "$(zoxide init zsh --cmd j)"
 # direnv
 eval "$(direnv hook zsh)"
 
+alias pinentry='pinentry-mac'
+
 # fzf-sourcing
 source /nix/store/*-fzf-*/share/fzf/key-bindings.zsh
 source /nix/store/*-fzf-*/share/fzf/completion.zsh
+

@@ -6,4 +6,5 @@ _:
  "notion"
  "zen-browser"
  "docker"
+ "sioyek"
 ]

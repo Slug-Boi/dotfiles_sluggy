@@ -6,10 +6,10 @@
 }: {
   home.packages = with pkgs; [
     yazi
-    ueberzugpp
+    #ueberzugpp
 
     # req plugins
-    ffmpegthumbnailer
+    #ffmpegthumbnailer
     mediainfo
     clipboard-jh
   ];

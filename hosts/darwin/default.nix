@@ -101,7 +101,7 @@ in
         AppleInterfaceStyle = "Dark"; # dark mode
 
         AppleKeyboardUIMode = 3; # Mode 3 enables full keyboard control.
-        ApplePressAndHoldEnabled = true; # enable press and hold
+        ApplePressAndHoldEnabled = false; # enable press and hold
 
         #NSAutomaticCapitalizationEnabled = false; # disable auto capitalization        
         #NSAutomaticDashSubstitutionEnabled = false; # disable auto dash substitution 
@@ -141,6 +141,10 @@ in
       # Incomplete list of macOS `defaults` commands :
       #   https://github.com/yannbertrand/macos-defaults
       CustomUserPreferences = {
+        "com.microsoft.VSCode" = {
+          "ApplePressAndHoldEnabled" = false;
+        };
+
         "com.apple.finder" = {
           AppleShowAllFiles = false;
           ShowExternalHardDrivesOnDesktop = false;

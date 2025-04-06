@@ -7,4 +7,6 @@ _:
  "zen-browser"
  "docker"
  "sioyek"
+ "tailscale"
+ "rio"
 ]

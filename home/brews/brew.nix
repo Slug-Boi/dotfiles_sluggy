@@ -11,4 +11,5 @@ _:
 "sketchybar"
 "gnupg"
 "pinentry-touchid"
+"py-spy"
 ]

@@ -6,7 +6,7 @@ scriptencoding utf-8
 set fileencoding=utf-8
 set encoding=utf8
 
-" Line endings
+" Line endings "
 set fileformat=unix
 set fileformats=unix
 
@@ -15,6 +15,7 @@ set nocompatible
 
 " File line numbers
 set number
+set relativenumber
 
 " Enable syntax highlighting
 syntax on

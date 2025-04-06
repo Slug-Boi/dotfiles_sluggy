@@ -6,6 +6,7 @@ return {
       require('modes').setup(
         {
           colors = {
+            bg = "",
             copy = "#f5c359",
             delete = "#c75c6a",
             insert = "#78ccc5",
@@ -13,7 +14,7 @@ return {
           },
 
           -- Set opacity for cursorline and number background
-          line_opacity = 0.15,
+          line_opacity = 0.25,
 
           -- Enable cursor highlights
           set_cursor = true,

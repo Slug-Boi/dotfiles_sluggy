@@ -10,11 +10,13 @@
     #../../home/alacritty
     ../../home/git
     ../../home/kitty
+    ../../home/rio
     ../../home/zsh
     ../../home/yazi
     ../../home/cocommit
     ../../home/lazygit
     ../../home/nvim 
+    ../../home/php.nix
 
     ../../home/programs.nix
     ../../home/langs.nix

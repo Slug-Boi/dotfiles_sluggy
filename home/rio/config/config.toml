@@ -26,7 +26,7 @@
 # define x axis padding (default is 0)
 #
 # Example:
-# padding-x = 10
+padding-x = 5
 
 # Padding-y
 #
@@ -34,7 +34,7 @@
 # (default is [0, 0])
 #
 # Example:
-# padding-y = [30, 10]
+padding-y = [0, 3]
 
 # Option as Alt
 #
@@ -126,13 +126,14 @@ args = []
 # • decorations - Set window decorations, options: "Enabled", "Disabled", "Transparent", "Buttonless"
 #
 # Example:
-# [window]
+[window]
 # width = 600
-# height = 400
-# mode = "windowed"
-opacity = 0.85
+#height = 
+mode = "Maximized"
+opacity = 0.60
 blur = true
-decorations = "disabled"
+decorations = "Transparent"
+macos-use-shadow = true
 
 # Renderer
 #
@@ -259,7 +260,7 @@ family = "IosevkaTerm Nerd Font"
 #
 # Example:
 [navigation]
-mode = "nativeTab"
+mode = "NativeTab"
 clickable = false
 hide-if-single = true
 use-current-path = true
@@ -306,15 +307,27 @@ use-current-path = true
 #
 # Example:
 [colors]
-background = '#171A1F'
-foreground = '#B6BECA'
-# cursor = '#F38BA3'
-# tabs = '#443d40'
-# tabs-active = '#F38BA3'
-# green = '#0BA95B'
-# red = '#ED203D'
-# blue = '#12B5E5'
-# yellow = '#FCBA28'
+background = '#0c0c0c'
+foreground = '#d9d9d9'
+selection-background = '#343434'
+selection-foreground = '#ffffff'
+cursor = '#b9bcba'
+black = '#1a1a1a'
+red = '#f4005f'
+green = '#98e024'
+yellow = '#fd971f'
+blue = '#9d65ff'
+magenta = '#f4005f'
+cyan = '#58d1eb'
+white = '#c4c5b5'
+light_black = '#625e4c'
+light_red = '#f4005f'
+light_green = '#98e024'
+light_yellow = '#e0d561'
+light_blue = '#9d65ff'
+light_magenta = '#f4005f'
+light_cyan = '#58d1eb'
+light_white = '#f6f6ef'
 
 # Bindings
 #

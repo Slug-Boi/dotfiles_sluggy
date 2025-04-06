@@ -42,7 +42,7 @@ padding-y = [0, 3]
 # Possible choices: 'both', 'left' and 'right'.
 #
 # Example:
-option-as-alt = 'left'
+option-as-alt = 'both'
 
 # Line height
 #
@@ -130,7 +130,7 @@ args = []
 # width = 600
 #height = 
 mode = "Maximized"
-opacity = 0.60
+opacity = 0.65
 blur = true
 decorations = "Transparent"
 macos-use-shadow = true
@@ -260,8 +260,8 @@ family = "IosevkaTerm Nerd Font"
 #
 # Example:
 [navigation]
-mode = "NativeTab"
-clickable = false
+mode = "Bookmark"
+clickable = true
 hide-if-single = true
 use-current-path = true
 # color-automation = []

@@ -17,6 +17,7 @@
     ../../home/lazygit
     ../../home/nvim 
     ../../home/php.nix
+    ../../home/zellij
 
     ../../home/programs.nix
     ../../home/langs.nix

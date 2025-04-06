@@ -26,6 +26,9 @@
     # Scripting
     #lua
 
+    # Latex
+    texliveFull
+    
     # Python
     # python3  
     # python311Packages.virtualenv # globally install virtualenv

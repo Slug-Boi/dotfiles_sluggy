@@ -17,6 +17,23 @@ update:
 rebuild:
 	nix run --extra-experimental-features 'nix-command flakes' .#build-switch
 
+# Make the host the one in /etc/hostname
+host != cat /etc/hostname
+# If not found, use skein
+host ?= skein
+
+rebuild-nixos:
+	sudo nixos-rebuild switch --show-trace --flake .#$(host)
+
+vm:
+	nix --extra-experimental-features "nix-command flakes" build --show-trace --option eval-cache false .#$(host).vm
+
+iso:
+	nix --extra-experimental-features "nix-command flakes" build --show-trace --option eval-cache false .#$(host).install-iso
+
+installer:
+	nix --extra-experimental-features "nix-command flakes" build --show-trace --option eval-cache false .#installers.x86_64-linux.$(host)
+
 nixprofiles != ls -dv /nix/var/nix/profiles/system-*-link/|tail -2
 homeprofiles != ls -dv ~/.local/state/nix/profiles/home-manager-*-link/|tail -2
 show-diff:

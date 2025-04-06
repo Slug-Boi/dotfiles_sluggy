@@ -8,7 +8,7 @@
     zellij
   ];
 
-  # xdg.configFile.zellij = {
-  #   source = config.lib.file.mkOutOfStoreSymlink "${variables.dotfilesLocation}" + (builtins.toPath "/home/zellij/config");
-  # };
+  xdg.configFile.zellij = {
+    source = config.lib.file.mkOutOfStoreSymlink "${variables.dotfilesLocation}" + (builtins.toPath "/home/zellij/config");
+  };
 }

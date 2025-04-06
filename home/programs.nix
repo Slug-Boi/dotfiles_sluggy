@@ -24,6 +24,7 @@
     gnupg
     lazydocker
     opentofu
+    jless
 
     # Encryption and security tools
     #age
@@ -51,6 +52,7 @@
     asciinema
     imagemagick_light
     zotero
+    lynx 
 
     # Darwin 
     dockutil

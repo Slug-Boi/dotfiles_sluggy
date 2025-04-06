@@ -40,8 +40,16 @@
       url = "github:FelixKratz/homebrew-formulae";
       flake = false;
     };
+    homebrew-jorgelbg = {
+      url = "github:jorgelbg/homebrew-tap";
+      flake = false;
+    };
     disko = {
       url = "github:nix-community/disko";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    nixos-generators = {
+      url = "github:nix-community/nixos-generators";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   }; 
@@ -49,7 +57,7 @@
 
  
   
-  outputs = { self, darwin, nix-homebrew, homebrew-bundle, homebrew-core, homebrew-cask,homebrew-services, home-manager, homebrew-aerospace, homebrew-felix, nixpkgs, nixpkgs-unstable, disko } @inputs:
+  outputs = { self, darwin, nix-homebrew, homebrew-bundle, homebrew-core, homebrew-cask,homebrew-services, home-manager, homebrew-aerospace, homebrew-felix, homebrew-jorgelbg, nixpkgs, nixpkgs-unstable, disko, nixos-generators } @inputs:
     let
       user = "slugboi";
       linuxSystems = [ "x86_64-linux" "aarch64-linux" ];
@@ -89,7 +97,18 @@
         "check-keys" = mkApp "check-keys" system;
         "rollback" = mkApp "rollback" system;
       };
-        #theme = import ./theme.nix;
+      args =
+        {
+        variables = import ./variables.nix;
+        theme = import ./theme.nix;
+      } // inputs;
+      hosts = import ./hosts args;
+      installers = import ./hosts/installers.nix ({
+          hosts = hosts.hosts;
+          systems = hosts.allSystems;
+      }
+      // args);
+
     in
     {
       devShells = forAllSystems devShell;
@@ -124,6 +143,7 @@
                   "homebrew/homebrew-services" = homebrew-services;
                   "nikitabobko/homebrew-nikitabobko" = homebrew-aerospace;
                   "felix/homebrew-felix" = homebrew-felix;
+                  "jorgelbg/homebrew-jorgelbg" = homebrew-jorgelbg;
                 };
 
                 mutableTaps = false;
@@ -138,17 +158,14 @@
       nixosConfigurations = nixpkgs.lib.genAttrs linuxSystems (system: nixpkgs.lib.nixosSystem {
         inherit system;
         specialArgs = inputs;
-        modules = [
-          disko.nixosModules.disko
-          home-manager.nixosModules.home-manager {
-            home-manager = {
-              useGlobalPkgs = true;
-              useUserPackages = true;
-              users.${user} = import ./modules/nixos/home-manager.nix;
-            };
-          }
-          ./hosts/nixos
-        ];
+        hosts = hosts;
+        nixosConfigurations = hosts.nixosConfigurations;
+        packages = hosts.packages;
+        installers = installers;
+
+        formatter = nixpkgs.lib.genAttrs hosts.allSystems (
+          system: nixpkgs.legacyPackages.${system}.alejandra
+        );
      });
   };
 }

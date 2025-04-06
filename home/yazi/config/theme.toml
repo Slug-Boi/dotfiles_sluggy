@@ -1,3 +1,2 @@
 [flavor]
-light = "everforest-medium"
-dark = "everforest-medium"
+use = "monokai-vibrant"

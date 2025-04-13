@@ -128,23 +128,6 @@ on = ")"
 run = "tab_switch --args=next"
 desc = "Switch to next tab"
 
-# Toggle views
-[[manager.prepend_keymap]]
-on = "<C-1>"
-run = "plugin --sync toggle-view --args=parent"
-desc = "Toggle parent"
-
-[[manager.prepend_keymap]]
-on = "<C-2>" 
-run = "plugin --sync toggle-view --args=current"
-desc = "Toggle current"
-
-[[manager.prepend_keymap]]
-on = "<C-3>"
-run = "plugin --sync toggle-view --args=preview"
-desc = "Toggle preview"
-
-
 ## Relative motions plugin binds
 [[manager.prepend_keymap]]
 on = [ "1" ]

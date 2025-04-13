@@ -39,11 +39,6 @@ rev = "f1fb6cc"
 hash = "ea24edab4a62c94dbd205adfb6f2c08d"
 
 [[plugin.deps]]
-use = "dawsers/toggle-view"
-rev = "d326a53"
-hash = "fc99d5a9e5b588e5c43c836c5d61c2ca"
-
-[[plugin.deps]]
 use = "andreas-timm/sips-preview"
 rev = "ec73494"
 hash = "4be7fad65d878edf862bf4242a44962e"

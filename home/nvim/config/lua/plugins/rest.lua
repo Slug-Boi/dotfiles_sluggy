@@ -1,4 +1,5 @@
 local opts = {
+
   -- Skip SSL verification, useful for unknown certificates
   skip_ssl_verification = false,
   -- Highlight request on run
@@ -33,8 +34,11 @@ return {
     priority = 1000,
     config = true,
     opts = {
-      rocks = { "lua-curl", "nvim-nio", "mimetypes", "xml2lua" }
-    }
+      rocks = { 
+	hererocks = true,
+	 --"lua-curl", "nvim-nio", "mimetypes", "xml2lua" 
+	},
+    },
   },
   {
     "rest-nvim/rest.nvim",
@@ -45,4 +49,3 @@ return {
     end,
   },
 }
-

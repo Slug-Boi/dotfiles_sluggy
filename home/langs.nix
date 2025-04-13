@@ -1,7 +1,13 @@
 {pkgs, ...}: {
   home.packages = with pkgs; [
-    dotnet-sdk_7
-    nodejs-18_x
+    #dotnet-sdk_7
+    dotnetCorePackages.sdk_8_0_3xx
+
+    yarn
+
+    llvm_18
+    #darwin.libresolv
+    #darwin.libresolvHeaders
 
     # Go
     go
@@ -17,7 +23,19 @@
     # Java, also required by Scala metals
     jdk11
 
-    # COBOL
-    gnu-cobol
+    # Scripting
+    #lua
+
+    # Latex
+    texliveFull
+    
+    # Python
+    # python3  
+    # python311Packages.virtualenv # globally install virtualenv
+    # python311Packages.pip
+
+    # C compiler
+    #libgcc
+    gsl
   ];
 }

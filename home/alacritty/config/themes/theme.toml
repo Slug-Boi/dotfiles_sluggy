@@ -1,0 +1,10 @@
+[colors.primary]
+background = "#171a1f"
+foreground = "#b6beca"
+
+[window]
+padding.y = 5
+padding.x = 5
+opacity = 0.85
+blur = true
+decorations = "Buttonless"

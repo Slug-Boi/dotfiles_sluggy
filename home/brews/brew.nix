@@ -1,0 +1,15 @@
+_:
+[
+"nodejs"
+"pinentry-mac"
+"manim"
+"cmake"
+"py3cairo"
+"pkg-config"
+"dagger"
+"borders"
+"sketchybar"
+"gnupg"
+"pinentry-touchid"
+"py-spy"
+]

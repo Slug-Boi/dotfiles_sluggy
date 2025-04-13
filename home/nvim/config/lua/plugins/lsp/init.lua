@@ -41,7 +41,7 @@ local servers = lu.load_servers({
   "svelte-server",
   "tailwindcss-server",
   "terraform-server",
-  "ts-server",
+  "ts-ls",
   "vue-server",
   "yaml-server",
 })

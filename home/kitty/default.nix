@@ -4,12 +4,13 @@
   variables,
   ...
 }: {
-  home.packages = [
-    (pkgs.callPackage ../../pkgs/kitty {})
+  home.packages = with pkgs; [
+    kitty
   ];
-
-  # Must be installed manually
+  
   xdg.configFile.kitty = {
     source = config.lib.file.mkOutOfStoreSymlink "${variables.dotfilesLocation}" + (builtins.toPath "/home/kitty/config");
+    
   };
-}
+
+ }

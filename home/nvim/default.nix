@@ -1,11 +1,12 @@
 {
   pkgs,
-  pkgs-unstable,
   config,
   variables,
   ...
-}: let
-  normalPackages = with pkgs; [
+}: {
+  home.packages = with pkgs; [
+    neovim
+    tree-sitter
     curl # for vimplug
     virtualenv
     xclip
@@ -14,15 +15,8 @@
     lua51Packages.luarocks
     lua-language-server
     rust-analyzer
-  ];
-in {
-  home.packages = with pkgs-unstable;
-    [
-      neovim
-      tree-sitter
-    ]
-    ++ normalPackages;
-
+  ];  
+      
   xdg.configFile.nvim = {
     source = config.lib.file.mkOutOfStoreSymlink "${variables.dotfilesLocation}" + (builtins.toPath "/home/nvim/config");
   };

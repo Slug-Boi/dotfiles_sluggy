@@ -1,0 +1,12 @@
+_:
+[
+ "aerospace"
+ "raycast"
+ "miniconda"
+ "notion"
+ "zen-browser"
+ "docker"
+ "sioyek"
+ "tailscale"
+ "rio"
+]

@@ -1,0 +1,4 @@
+[submodule "dotfiles_sluggy"]
+	path = dotfiles_sluggy
+  url = https://github.com/Slug-Boi/dotfiles_sluggy/
+  branch = nix-darwin

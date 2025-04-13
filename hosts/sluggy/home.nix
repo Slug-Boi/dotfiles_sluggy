@@ -1,7 +1,6 @@
 {...}: {
   imports = [
     ../../home/common.nix
-    ../../home/alacritty
     ../../home/betterlockscreen
     ../../home/dunst
     ../../home/fish
@@ -10,19 +9,23 @@
     ../../home/kitty
     ../../home/lazygit
     ../../home/nvim
+    ../../home/rio
+    ../../home/zsh
     (import ../../home/picom {nvidiaDrivers = true;})
     ../../home/polybar
     ../../home/rofi
     ../../home/wallpapers
-    ../../home/zathura
+    #../../home/zathura
+    ../../home/nixos/nixprograms.nix
 
-    ../../home/k8.nix
+
+    #../../home/k8.nix
     ../../home/langs.nix
     ../../home/python3.nix
       
-    ../../home/anytype.nix
-    ../../home/todo.nix
-    ../../home/obs.nix
+    #../../home/anytype.nix
+    #../../home/todo.nix
+    #../../home/obs.nix
     ../../home/programs.nix
     ../../home/tmux.nix
     ../../home/utils.nix

@@ -22,6 +22,13 @@ Add the these lines to your `theme.toml` configuration file to use it:
 
 ```toml
 [flavor]
+dark = "everforest-medium"
+```
+
+For Yazi versions before 0.4:
+
+```toml
+[flavor]
 use = "everforest-medium"
 ```
 

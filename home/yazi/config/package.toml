@@ -1,62 +1,52 @@
 [[plugin.deps]]
-use = "Reledia/glow"
-rev = "388e847"
-hash = "cb995032091f556762646936565fa516"
-
-[[plugin.deps]]
 use = "yazi-rs/plugins:smart-enter"
-rev = "f1fb6cc"
-hash = "cfb34ebf943df6fe3406afde674d9a5b"
+rev = "b12a9ab"
+hash = "7918aab6a71caf31b58411f789195677"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:full-border"
-rev = "f1fb6cc"
-hash = "3a73613fc702a5f8369791b3401f52f1"
+rev = "b12a9ab"
+hash = "1f3dad061209081a6b04dd6ff2cb06c7"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:chmod"
-rev = "f1fb6cc"
-hash = "36c82bb433078e8e752351d961cac777"
+rev = "b12a9ab"
+hash = "2f1053f89d1a301a648ab181d0948e38"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:diff"
-rev = "f1fb6cc"
-hash = "284f6694e3b1a4afd686acf1052acd90"
+rev = "b12a9ab"
+hash = "7a08e303167d5b655c06da6d570f0333"
 
 [[plugin.deps]]
 use = "pirafrank/what-size"
-rev = "f08f7f2"
-hash = "6de1e859aa4f9832aa00a1a65e552ea3"
+rev = "f1c6b69"
+hash = "6e789212eb41d937bab04877ca361099"
 
 [[plugin.deps]]
 use = "AnirudhG07/plugins-yazi:copy-file-contents"
-rev = "f871a9c"
-hash = "5839e7f19b1c0f4e6150778821463cc9"
+rev = "524c52c"
+hash = "27c50e6bc15c09096505b805b238ade0"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:smart-filter"
-rev = "f1fb6cc"
-hash = "ea24edab4a62c94dbd205adfb6f2c08d"
-
-[[plugin.deps]]
-use = "andreas-timm/sips-preview"
-rev = "ec73494"
-hash = "4be7fad65d878edf862bf4242a44962e"
-
-[[plugin.deps]]
-use = "Ape/mediainfo"
-rev = "c69314e"
-hash = "edbf9c7a6a69c8c09b53f860fd887f5c"
+rev = "b12a9ab"
+hash = "f0c4b41b5d19a3144958383333eff6e7"
 
 [[plugin.deps]]
 use = "Lil-Dank/lazygit"
-rev = "9f924e3"
-hash = "2b0c33928986f126d5c5a4cac31a6b46"
+rev = "7a08a09"
+hash = "a1fa2b3e1826c3a34804ea8c548e9f80"
+
+[[plugin.deps]]
+use = "Reledia/glow"
+rev = "c76bf4f"
+hash = "a6b78bf9af5390e3a85a6951fbb7b93"
 
 [[flavor.deps]]
 use = "Chromium-3-Oxide/everforest-medium"
-rev = "65bc09b"
-hash = "d610b54f3b9fb8a3f60821d424917e8b"
+rev = "3d5f847"
+hash = "9b4190e2447f2c843fee23ea5f068f6"
 
 [[flavor.deps]]
 use = "sanjinso/monokai-vibrant"

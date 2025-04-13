@@ -4,11 +4,6 @@ rev = "388e847"
 hash = "cb995032091f556762646936565fa516"
 
 [[plugin.deps]]
-use = "sharklasers996/eza-preview"
-rev = "7ca4c25"
-hash = "d1efd1931dd738af0d6e4f41dd491313"
-
-[[plugin.deps]]
 use = "yazi-rs/plugins:smart-enter"
 rev = "f1fb6cc"
 hash = "cfb34ebf943df6fe3406afde674d9a5b"

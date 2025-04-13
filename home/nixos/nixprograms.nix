@@ -8,4 +8,8 @@
       enableZshIntegration = true;
     };
   };
+
+  home.packages = with pkgs; [
+    rio
+  ];
 }

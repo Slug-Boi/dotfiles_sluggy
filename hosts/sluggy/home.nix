@@ -11,6 +11,7 @@
     ../../home/nvim
     ../../home/rio
     ../../home/zsh
+    ../../home/yazi
     (import ../../home/picom {nvidiaDrivers = true;})
     ../../home/polybar
     ../../home/rofi

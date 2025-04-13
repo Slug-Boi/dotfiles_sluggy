@@ -1,7 +1,6 @@
-# Make the host the one in /etc/hostname
-host != cat /etc/hostname
-# If not found, use skein
-host ?= skein
+gc:
+	nix-env --delete-generations old
+	nix-store --gc
 
 repl:
 	nix --extra-experimental-features "nix-command flakes repl-flake" --show-trace repl
@@ -15,7 +14,16 @@ fmt:
 update:
 	nix flake update
 
+# Make the host the one in /etc/hostname
+host != cat /etc/hostname
+
 rebuild:
+	nix run --extra-experimental-features 'nix-command flakes' --show-trace .#build-switch
+
+# If not found, use skein
+host ?= skein
+
+rebuild-nixos:
 	sudo nixos-rebuild switch --show-trace --flake .#$(host)
 
 vm:

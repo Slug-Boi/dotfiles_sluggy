@@ -4,11 +4,6 @@ rev = "388e847"
 hash = "cb995032091f556762646936565fa516"
 
 [[plugin.deps]]
-use = "dedukun/relative-motions"
-rev = "1d6d686"
-hash = "6bc391f506fd73ea0a45a7bae4759c13"
-
-[[plugin.deps]]
 use = "sharklasers996/eza-preview"
 rev = "7ca4c25"
 hash = "d1efd1931dd738af0d6e4f41dd491313"

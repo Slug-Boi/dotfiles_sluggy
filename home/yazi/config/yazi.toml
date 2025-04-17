@@ -19,13 +19,10 @@ show_symlink = true
 
 [plugin]
 prepend_previewers = [
-  { mime = "image", run = "sips-preview" },
   { name = "*.md", run = "glow" },
   { name = "*/", run = "eza-preview" },
 ]
-prepend_preloaders = [
-    { mime = "image", run = "sips-preview" }
-]
+
 
 [[manager.prepend_keymap]]
 on   = [ "g", "i" ]

@@ -290,26 +290,156 @@ load_plugins {
 // For more examples, see: https://github.com/zellij-org/zellij/tree/main/example/themes
 // Once these themes are defined, one of them should to be selected in the "theme" section of this file
 //
-// themes {
-//     dracula {
-//         fg 248 248 242
-//         bg 40 42 54
-//         red 255 85 85
-//         green 80 250 123
-//         yellow 241 250 140
-//         blue 98 114 164
-//         magenta 255 121 198
-//         orange 255 184 108
-//         cyan 139 233 253
-//         black 0 0 0
-//         white 255 255 255
-//     }
-// }
+themes {
+    dracula {
+        fg 248 248 242
+        bg 40 42 54
+        red 255 85 85
+        green 80 250 123
+        yellow 241 250 140
+        blue 98 114 164
+        magenta 255 121 198
+        orange 255 184 108
+        cyan 139 233 253
+        black 0 0 0
+        white 255 255 255
+    }
+    monokai {
+        fg 248 248 242    // #f8f8f2 (light cream)
+        bg 40 42 54       // #282a36 (dark purple-gray)
+        red 255 85 85     // #ff5555 (bright red)
+        green 80 250 123  // #50fa7b (neon green)
+        yellow 241 250 140 // #f1fa8c (soft yellow)
+        blue 98 114 164   // #6272a4 (muted periwinkle)
+        magenta 255 121 198 // #ff79c6 (vibrant pink)
+        orange 255 184 108 // #ffb86c (peach)
+        cyan 139 233 253  // #8be9fd (electric blue)
+        black 0 0 0       // #000000
+        white 255 255 255 // #ffffff
+
+        text_unselected {
+            base 248 248 242  // #f8f8f2 (light gray)
+            background 39 40 34  // #272822 (dark gray)
+            emphasis_0 249 38 114  // #f92672 (vibrant pink)
+            emphasis_1 166 226 46  // #a6e22e (bright green)
+            emphasis_2 230 219 116  // #e6db74 (soft yellow)
+            emphasis_3 253 95 240   // #fd5ff0 (magenta)
+        }
+        text_selected {
+            base 39 40 34      // #272822 (dark gray)
+            background 166 226 46  // #a6e22e (bright green)
+            emphasis_0 249 38 114  // #f92672 (pink)
+            emphasis_1 166 226 46  // #a6e22e (green)
+            emphasis_2 230 219 116  // #e6db74 (yellow)
+            emphasis_3 253 95 240   // #fd5ff0 (magenta)
+        }
+        ribbon_selected {
+            base 39 40 34      // #272822 (dark gray)
+            background 230 219 116  // #e6db74 (yellow)
+            emphasis_0 249 38 114  // #f92672 (pink, for alerts)
+            emphasis_1 253 151 31  // #fd971f (orange)
+            emphasis_2 253 95 240   // #fd5ff0 (magenta)
+            emphasis_3 161 239 228  // #a1efe4 (cyan)
+        }
+        ribbon_unselected {
+            base 39 40 34      // #272822 (dark gray)
+            background 248 248 242  // #f8f8f2 (light gray)
+            emphasis_0 249 38 114  // #f92672 (pink)
+            emphasis_1 248 248 242  // #f8f8f2 (light gray)
+            emphasis_2 161 239 228  // #a1efe4 (cyan)
+            emphasis_3 253 95 240   // #fd5ff0 (magenta)
+        }
+        table_title {
+            base 230 219 116  // #e6db74 (yellow)
+            background 0 0 0    // Black (for contrast)
+            emphasis_0 249 38 114  // #f92672 (pink)
+            emphasis_1 166 226 46  // #a6e22e (green)
+            emphasis_2 230 219 116  // #e6db74 (yellow)
+            emphasis_3 253 95 240   // #fd5ff0 (magenta)
+        }
+        table_cell_selected {
+            base 39 40 34      // #272822 (dark gray)
+            background 166 226 46  // #a6e22e (green)
+            emphasis_0 249 38 114  // #f92672 (pink)
+            emphasis_1 166 226 46  // #a6e22e (green)
+            emphasis_2 230 219 116  // #e6db74 (yellow)
+            emphasis_3 253 95 240   // #fd5ff0 (magenta)
+        }
+        table_cell_unselected {
+            base 248 248 242  // #f8f8f2 (light gray)
+            background 39 40 34  // #272822 (dark gray)
+            emphasis_0 249 38 114  // #f92672 (pink)
+            emphasis_1 166 226 46  // #a6e22e (green)
+            emphasis_2 230 219 116  // #e6db74 (yellow)
+            emphasis_3 253 95 240   // #fd5ff0 (magenta)
+        }
+        list_selected {
+            base 39 40 34      // #272822 (dark gray)
+            background 166 226 46  // #a6e22e (green)
+            emphasis_0 249 38 114  // #f92672 (pink)
+            emphasis_1 166 226 46  // #a6e22e (green)
+            emphasis_2 230 219 116  // #e6db74 (yellow)
+            emphasis_3 253 95 240   // #fd5ff0 (magenta)
+        }
+        list_unselected {
+            base 248 248 242  // #f8f8f2 (light gray)
+            background 39 40 34  // #272822 (dark gray)
+            emphasis_0 249 38 114  // #f92672 (pink)
+            emphasis_1 166 226 46  // #a6e22e (green)
+            emphasis_2 230 219 116  // #e6db74 (yellow)
+            emphasis_3 253 95 240   // #fd5ff0 (magenta)
+        }
+        frame_selected {
+            base 230 219 116  // #e6db74 (yellow)
+            background 0 0 0    // Black
+            emphasis_0 249 38 114  // #f92672 (pink)
+            emphasis_1 166 226 46  // #a6e22e (green)
+            emphasis_2 253 95 240   // #fd5ff0 (magenta)
+            emphasis_3 0 0 0       // Black
+        }
+        frame_highlight {
+            base 249 38 114    // #f92672 (pink)
+            background 0 0 0    // Black
+            emphasis_0 249 38 114  // #f92672 (pink)
+            emphasis_1 249 38 114  // #f92672 (pink)
+            emphasis_2 249 38 114  // #f92672 (pink)
+            emphasis_3 249 38 114  // #f92672 (pink)
+        }
+        exit_code_success {
+            base 230 219 116  // #e6db74 (yellow)
+            background 0 0 0    // Black
+            emphasis_0 166 226 46  // #a6e22e (green)
+            emphasis_1 39 40 34   // #272822 (dark gray)
+            emphasis_2 253 95 240  // #fd5ff0 (magenta)
+            emphasis_3 161 239 228 // #a1efe4 (cyan)
+        }
+        exit_code_error {
+            base 249 38 114    // #f92672 (pink)
+            background 0 0 0    // Black
+            emphasis_0 253 151 31  // #fd971f (orange)
+            emphasis_1 0 0 0       // Black
+            emphasis_2 0 0 0       // Black
+            emphasis_3 0 0 0       // Black
+        }
+        multiplayer_user_colors {
+            player_1 253 95 240   // #fd5ff0 (magenta)
+            player_2 161 239 228  // #a1efe4 (cyan)
+            player_3 0 0 0        // Black
+            player_4 253 151 31   // #fd971f (orange)
+            player_5 166 226 46   // #a6e22e (green)
+            player_6 0 0 0        // Black
+            player_7 249 38 114   // #f92672 (pink)
+            player_8 0 0 0       // Black
+            player_9 0 0 0        // Black
+            player_10 0 0 0      // Black
+        }
+    }
+}
 
 // Choose the theme that is specified in the themes section.
 // Default: default
 //
-theme "default"
+theme "monokai"
 
 // The name of the default layout to load on startup
 // Default: "default"

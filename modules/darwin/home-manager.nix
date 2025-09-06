@@ -1,4 +1,4 @@
-{ config, pkgs, pkgs-unstable, lib, home-manager, specialArgs, ... }:
+{ config, pkgs, pkgs-unstable, lib, home-manager, specialArgs, inputs, ... }:
 
 let
   user = "slugboi";
@@ -26,6 +26,11 @@ in
     casks = pkgs.callPackage ../../home/casks/cask.nix {};
     
     # onActivation.cleanup = "uninstall";
+    onActivation = {
+      #cleanup = "uninstall";
+      autoUpdate = true;
+      upgrade = true;
+    };
 
 
     # These app IDs are from using the mas CLI app
@@ -64,7 +69,7 @@ in
         packages = pkgs.callPackage ./packages.nix {};
         file = lib.mkMerge [
         ];
-        stateVersion = "23.11";
+        stateVersion = "25.11";
       };
       programs = {
         direnv = {

@@ -2,10 +2,11 @@
   pkgs,
   config,
   variables,
+  cocommit,
   ...
 }: {
   home.packages = [
-    (pkgs.callPackage ../../pkgs/cocommit {})
+    cocommit.packages.${pkgs.system}.default
   ];
 
   # Must be installed manually

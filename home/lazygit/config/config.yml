@@ -71,7 +71,6 @@ git:
   autoRefresh: true
   fetchAll: true
   branchLogCmd: git log --graph --color=always --abbrev-commit --decorate --date=relative --pretty=medium {{branchName}} --
-  allBranchesLogCmd: git log --graph --all --color=always --abbrev-commit --decorate --date=relative  --pretty=medium
   overrideGpg: false
   disableForcePushing: true
   commitPrefixes: {}
@@ -81,6 +80,8 @@ git:
     showGraph: when-maximised
     showWholeGraph: false
   diffContextSize: 3
+  allBranchesLogCmds:
+    - git log --graph --all --color=always --abbrev-commit --decorate --date=relative  --pretty=medium
 update:
   method: prompt
   days: 14
@@ -243,7 +244,6 @@ customCommands:
   - key: '!'
     command: 'cocommit -p "{{.Form.message}}" {{.Form.authors}}'
     context: 'files'
-    showOutput: true
     prompts:
       - type: 'input'
         title: 'Commit message'
@@ -253,7 +253,8 @@ customCommands:
         title: 'Authors'
         key: 'authors'
         initialValue: ''
+    output: popup
   - key: '@'
     context: 'files'
-    subprocess: true
     command: 'cocommit -p; exit'
+    output: terminal

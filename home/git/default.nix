@@ -9,9 +9,18 @@
 
   programs.git = {
     enable = true;
-    ignores = [ "*.swp" ];
     userName = variables.git.username;
     userEmail = variables.git.email;
+    ignores = [
+      "*.swp"
+      "*.swo"
+      "*.DS_Store"
+      ".DS_Store"
+      ".idea/"
+      ".vscode/"
+      "logs/"
+      "tmp/"
+    ];
 
     extraConfig = {
       init.defaultBranch = "master";

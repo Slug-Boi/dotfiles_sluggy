@@ -15,12 +15,14 @@
       pytesseract
       pycurl
       pycairo
+      gurobipy
       
       # Pretty stuff
       halo
 
       # Database
-      mysql-connector
+      #mysql-connector
+
 
       # Testing
       pytest
@@ -32,7 +34,7 @@ in {
     poetry
     maturin
     uv
-    
+
     ((python3.withPackages python-packages).override (args: {ignoreCollisions = true;}))
     #manim
   ];

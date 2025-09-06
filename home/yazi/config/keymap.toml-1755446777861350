@@ -1,129 +1,129 @@
 # Drop to shell
-[[mgr.prepend_keymap]]
+[[manager.prepend_keymap]]
 on   = "!"
 run  = 'shell "$SHELL" --block --confirm'
 desc = "Open shell here"
 
 # Smart directory
-[[mgr.prepend_keymap]]
+[[manager.prepend_keymap]]
 on   = "l"
 run  = "plugin --sync smart-enter"
 desc = "Enter the child directory, or open the file"
 
 # Smart paste
-[[mgr.prepend_keymap]]
+[[manager.prepend_keymap]]
 on   = "p"
 run  = "plugin --sync smart-paste"
 desc = "Paste into the hovered directory or CWD"
 
 # Smart copy
-[[mgr.prepend_keymap]]
+[[manager.prepend_keymap]]
 on  = "y"
 run = [ '''
 	shell 'echo "$@" | pbcopy' --confirm
 ''', "yank" ]
 
 # Git root dir
-[[mgr.prepend_keymap]]
+[[manager.prepend_keymap]]
 on = [ "g", "r" ]
 run = '''
 	shell 'ya pub dds-cd --str "$(git rev-parse --show-toplevel)"' --confirm
 '''
 
 # Mac Quick Look bind
-[[mgr.prepend_keymap]]
+[[manager.prepend_keymap]]
 on = "<C-p>"
 run = '''
   shell 'qlmanage -p "$@"' --confirm
 '''
 
 # Chmod 
-[[mgr.prepend_keymap]]
+[[manager.prepend_keymap]]
 on   = [ "c", "m" ]
 run  = "plugin chmod"
 desc = "Chmod on selected files"
 
 # Create diff 
-[[mgr.prepend_keymap]]
+[[manager.prepend_keymap]]
 on   = "<C-d>"
 run  = "plugin diff"
 desc = "Diff the selected with the hovered file"
 
 # Calc size
-[[mgr.prepend_keymap]]
+[[manager.prepend_keymap]]
 on   = [ ".", "s" ]
 run  = "plugin what-size --args='--clipboard'"
 desc = "Calc size of selection or cwd"
 
 # Lazygit
-[[mgr.prepend_keymap]]
+[[manager.prepend_keymap]]
 on   = [ "g", "i" ]
 run  = "plugin lazygit"
 desc = "run lazygit"
 
 # Copy file contents
-[[mgr.prepend_keymap]]
+[[manager.prepend_keymap]]
 on = "<C-c>"
 run = ["plugin copy-file-contents"]
 desc = "Copy contents of file"
 
 # Smart filter
-[[mgr.prepend_keymap]]
+[[manager.prepend_keymap]]
 on   = "F"
 run  = "plugin smart-filter"
 desc = "Smart filter"
 
-[[mgr.prepend_keymap]]
+[[manager.prepend_keymap]]
 on = [ "<S-t>","1" ]
 run = "tab_switch 0"
 desc = "Switch to tab 1"
 
-[[mgr.prepend_keymap]]
+[[manager.prepend_keymap]]
 on = [ "<S-t>","2" ]
 run = "tab_switch 1"
 desc = "Switch to tab 2"
 
-[[mgr.prepend_keymap]]
+[[manager.prepend_keymap]]
 on = [ "<S-t>","3" ]
 run = "tab_switch 2"
 desc = "Switch to tab 3"
 
-[[mgr.prepend_keymap]]
+[[manager.prepend_keymap]]
 on = [ "<S-t>","4" ]
 run = "tab_switch 3"
 desc = "Switch to tab 4"
 
-[[mgr.prepend_keymap]]
+[[manager.prepend_keymap]]
 on = [ "<S-t>","5" ]
 run = "tab_switch 4"
 desc = "Switch to tab 5"
 
-[[mgr.prepend_keymap]]
+[[manager.prepend_keymap]]
 on = [ "<S-t>","6" ]
 run = "tab_switch 5"
 desc = "Switch to tab 6"
 
-[[mgr.prepend_keymap]]
+[[manager.prepend_keymap]]
 on = [ "<S-t>","7" ]
 run = "tab_switch 6"
 desc = "Switch to tab 7"
 
-[[mgr.prepend_keymap]]
+[[manager.prepend_keymap]]
 on = [ "<S-t>","8" ]
 run = "tab_switch 7"
 desc = "Switch to tab 8"
 
-[[mgr.prepend_keymap]]
+[[manager.prepend_keymap]]
 on = [ "<S-t>","9" ]
 run = "tab_switch 8"
 desc = "Switch to tab 9"
 
-[[mgr.prepend_keymap]]
+[[manager.prepend_keymap]]
 on = "("
 run = "tab_switch --args=prev"
 desc = "Switch to previous tab"
 
-[[mgr.prepend_keymap]]
+[[manager.prepend_keymap]]
 on = ")"
 run = "tab_switch --args=next"
 desc = "Switch to next tab"

@@ -4,9 +4,10 @@ _:
  "raycast"
  "miniconda"
  "notion"
- "zen-browser"
- "docker"
+ #"zen-browser"
+ #"docker"
  "sioyek"
  "tailscale"
  "rio"
+ "kawa"
 ]

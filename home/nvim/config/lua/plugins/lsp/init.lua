@@ -82,6 +82,37 @@ return {
       for _, server in pairs(servers) do
         server.setup(lu.on_attach)
       end
+
+      vim.api.nvim_create_autocmd("FileType", {
+        group = vim.api.nvim_create_augroup("AutoLspStart", {}),
+        callback = function(args)
+          local bufnr = args.buf
+          local filetype = vim.bo[bufnr].filetype
+
+          -- Only start LSP for valid file types (exclude help, terminal, etc.)
+          if filetype ~= "" and filetype ~= "help" and filetype ~= "terminal" then
+            -- Check if LSP is already started for this buffer
+            local clients = vim.lsp.get_clients({ bufnr = bufnr })
+            if #clients == 0 then
+              vim.cmd("LspStart")
+            end
+          end
+        end,
+      })
+
+      vim.schedule(function()
+    for _, bufnr in ipairs(vim.api.nvim_list_bufs()) do
+      if vim.api.nvim_buf_is_valid(bufnr) and vim.api.nvim_buf_is_loaded(bufnr) then
+        local filetype = vim.bo[bufnr].filetype
+        if filetype ~= "" and filetype ~= "help" and filetype ~= "terminal" then
+          local clients = vim.lsp.get_clients({ bufnr = bufnr })
+          if #clients == 0 then
+            vim.cmd("LspStart")
+          end
+        end
+      end
+    end
+  end)
     end,
     init = function()
       hide_lspconfig_messages()

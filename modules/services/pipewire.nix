@@ -14,6 +14,6 @@
   security.rtkit.enable = true;
 
   # Causes issues with pipewire if enabled
-  sound.enable = false;
-  hardware.pulseaudio.enable = false;
+  # sound.enable = false;
+  # hardware.pulseaudio.enable = false;
 }

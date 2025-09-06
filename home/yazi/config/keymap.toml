@@ -10,12 +10,6 @@ on   = "l"
 run  = "plugin --sync smart-enter"
 desc = "Enter the child directory, or open the file"
 
-# Smart paste
-[[manager.prepend_keymap]]
-on   = "p"
-run  = "plugin --sync smart-paste"
-desc = "Paste into the hovered directory or CWD"
-
 # Smart copy
 [[manager.prepend_keymap]]
 on  = "y"

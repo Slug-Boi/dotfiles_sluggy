@@ -8,7 +8,8 @@
     (import ./core-server.nix {diskPath = diskPath;})
 
     # services
-    ./services/pulseaudio.nix
+    #./services/pulseaudio.nix
+    ./services/pipewire.nix
     ./services/printing.nix
     ./services/security.nix
     ./services/shell.nix

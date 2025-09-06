@@ -11,5 +11,8 @@
 
   home.packages = with pkgs; [
     rio
+    discord
+    spotify
+    prismlauncher
   ];
 }

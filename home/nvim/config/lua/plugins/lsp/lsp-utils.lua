@@ -8,7 +8,7 @@ local utils = {}
 function utils.formatting()
   local bufnr = api.nvim_get_current_buf()
   -- Loop all the clients and use their formatting
-  for _, client in ipairs(lsp.get_active_clients()) do
+  for _, client in ipairs(lsp.get_clients()) do
     if client.name == "null-ls" or client.name == "clangd" then
       return
     end
@@ -42,6 +42,7 @@ function utils.on_attach(client, bufnr)
   vim.cmd("command! LspDiagNext lua vim.diagnostic.goto_next()")
   vim.cmd("command! LspDiagLine lua vim.diagnostic.open_float()")
   vim.cmd("command! LspSignatureHelp lua vim.lsp.buf.signature_help()")
+  vim.cmd("command! LspFormat lua global.lsp.formatting()")
 
   u.buf_map(bufnr, "n", "gd", ":LspDef<CR>")
   u.buf_map(bufnr, "n", "gy", ":LspTypeDef<CR>")
@@ -53,6 +54,8 @@ function utils.on_attach(client, bufnr)
   u.buf_map(bufnr, "n", "<Leader>la", ":LspCodeAction<CR>")
   u.buf_map(bufnr, "n", "<Leader>ld", ":LspDiagLine<CR>")
   u.buf_map(bufnr, "i", "<Leader>lh", "<cmd> LspSignatureHelp<CR>")
+  -- Temporary buf call to avoid stalling formatter lsp call on save
+  u.buf_map(bufnr, "n", "<Leader>cf", ":LspFormatting<CR>")
 
   if client.supports_method("textDocument/formatting") then
     vim.cmd("autocmd BufWritePre <buffer> lua global.lsp.formatting()")

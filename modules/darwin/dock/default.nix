@@ -54,18 +54,39 @@ in
             cfg.entries;
         in
         {
-          system.activationScripts.postUserActivation.text = ''
-            echo >&2 "Setting up the Dock..."
-            haveURIs="$(${dockutil}/bin/dockutil --list | ${pkgs.coreutils}/bin/cut -f2)"
-            if ! diff -wu <(echo -n "$haveURIs") <(echo -n '${wantURIs}') >&2 ; then
-              echo >&2 "Resetting Dock."
-              ${dockutil}/bin/dockutil --no-restart --remove all
-              ${createEntries}
-              killall Dock
-            else
-              echo >&2 "Dock setup complete."
-            fi
-          '';
+          # system.activationScripts.postUserActivation.text = ''
+          #   echo >&2 "Setting up the Dock..."
+          #   haveURIs="$(${dockutil}/bin/dockutil --list | ${pkgs.coreutils}/bin/cut -f2)"
+          #   if ! diff -wu <(echo -n "$haveURIs") <(echo -n '${wantURIs}') >&2 ; then
+          #     echo >&2 "Resetting Dock."
+          #     ${dockutil}/bin/dockutil --no-restart --remove all
+          #     ${createEntries}
+          #     killall Dock
+          #   else
+          #     echo >&2 "Dock setup complete."
+          #   fi
+          # '';
+
+  #           system.activationScripts.setupDock = {
+  #   text = ''
+  #     echo >&2 "Setting up the Dock for ${config.system.primaryUser.username}..."
+  #     
+  #     # Export necessary environment variables for the target user
+  #     export HOME=$(getent passwd ${config.system.primaryUser.username} | cut -d: -f6)
+  #     export USER=${config.system.primaryUser.username}
+  #
+  #     # Check current dock items vs desired items
+  #     haveURIs="$(${pkgs.dockutil}/bin/dockutil --list | ${pkgs.coreutils}/bin/cut -f2)"
+  #     if ! diff -wu <(echo -n "$haveURIs") <(echo -n '${wantURIs}') >&2 ; then
+  #       echo >&2 "Resetting Dock."
+  #       ${pkgs.dockutil}/bin/dockutil --no-restart --remove all
+  #       ${createEntries}
+  #       killall Dock
+  #     else
+  #       echo >&2 "Dock setup complete."
+  #     fi
+  #   '';
+  # };
         }
       );
 }

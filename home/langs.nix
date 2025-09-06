@@ -5,7 +5,7 @@
 
     yarn
 
-    llvm_18
+    #llvm_18
     #darwin.libresolv
     #darwin.libresolvHeaders
 
@@ -21,7 +21,10 @@
     pkg-config # openssl-sys
 
     # Java, also required by Scala metals
-    jdk11
+    #jdk11
+    jdk17
+    scala-cli
+    coursier
 
     # Scripting
     #lua

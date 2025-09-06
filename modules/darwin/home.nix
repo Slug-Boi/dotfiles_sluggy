@@ -17,13 +17,12 @@
     ../../home/cocommit
     ../../home/lazygit
     ../../home/nvim 
-    ../../home/php.nix
+    #../../home/php.nix
     ../../home/zellij
 
     ../../home/programs.nix
     ../../home/langs.nix
     ../../home/python3.nix
-      
     ../../home/tmux.nix
     #TODO: unsupported platform darwin x86_64 look at later
     #../../home/vscode.nix

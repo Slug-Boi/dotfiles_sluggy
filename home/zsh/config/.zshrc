@@ -108,10 +108,10 @@ function y() {
 alias ~="cd"
 #alias cd="cd"
 #alias z="zoxide"
-function cs() {
-  j $@
-  eza 
-}
+# function cs() {
+#   j $@
+#   eza 
+# }
 # ls
 alias ll='eza --color -alF'
 alias ls='eza --color'
@@ -149,7 +149,13 @@ eval "$(direnv hook zsh)"
 
 alias pinentry='pinentry-mac'
 
+alias katty="~/Documents/temp/katty"
+
+alias v="nvim"
+
 # fzf-sourcing
 source /nix/store/*-fzf-*/share/fzf/key-bindings.zsh
 source /nix/store/*-fzf-*/share/fzf/completion.zsh
+
+
 

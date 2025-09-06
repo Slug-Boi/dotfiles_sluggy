@@ -54,6 +54,11 @@
       url = "github:jorgelbg/homebrew-tap";
       flake = false;
     };
+    cocommit = {
+      url = "github:Slug-Boi/cocommit";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     nix-index-database.url = "github:nix-community/nix-index-database";
     nix-index-database.inputs.nixpkgs.follows = "nixpkgs";
 
@@ -61,11 +66,12 @@
       url = "github:nix-community/disko";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    
   };
 
   outputs = inputs @ {
     self, darwin, nix-homebrew, homebrew-bundle, homebrew-core, homebrew-cask,homebrew-services, home-manager, homebrew-aerospace, homebrew-felix, homebrew-jorgelbg, nixpkgs, nixpkgs-unstable, disko, nixos-generators,
-    nix-index-database,
+    nix-index-database, cocommit,
     ...
   }: let
       linuxSystems = [ "x86_64-linux" "aarch64-linux" ];
@@ -107,6 +113,7 @@
       };
       args =
         {
+        inherit inputs;
         variables = import ./variables.nix;
         theme = import ./theme.nix;
       } // inputs;

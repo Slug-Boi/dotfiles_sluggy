@@ -31,6 +31,7 @@
     #age-plugin-yubikey
     openssl
     libfido2
+    nmap
 
     # Development tools
     protobuf
@@ -53,6 +54,8 @@
     imagemagick_light
     zotero
     lynx 
+    audacity
+    yt-dlp
 
     # Text and terminal utilities
     jq
@@ -63,6 +66,7 @@
     unzip
     zsh-powerlevel10k
     fzf
-
+    cook-cli
   ];
+
 }

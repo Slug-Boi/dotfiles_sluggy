@@ -13,7 +13,8 @@
 
     xserver = {
       enable = true;
-
+      
+      autoRepeatDelay = 300;
       desktopManager = {
         xterm.enable = false;
       };

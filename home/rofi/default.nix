@@ -19,7 +19,7 @@ let
 in {
 	programs.rofi = {
 		enable = true;
-		package = pkgs-unstable.rofi;
+		package = pkgs-unstable.rofi-wayland;
 
 		theme = {
       "*" = {

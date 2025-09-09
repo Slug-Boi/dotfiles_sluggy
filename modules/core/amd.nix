@@ -1,18 +1,21 @@
 # AMD GPU configuration
 {config, pkgs, ...}: {
   # Enable OpenGL (this is still needed for AMD)
-  hardware.opengl = {
+  hardware.graphics = {
     enable = true;
-    driSupport = true;
-    driSupport32Bit = true;
+
+    enable32Bit = true;
+
+    # extraPackages32 = with pkgs; [
+    #   driversi686Linux.amdvlk
+    # ];
+    
     extraPackages = with pkgs; [
       amdvlk
-      rocm-opencl-icd
-      rocm-opencl-runtime
-      mesa.drivers
-    ];
-    extraPackages32 = with pkgs; [
-      driversi686Linux.amdvlk
+      #rocm-opencl-icd
+      #rocm-opencl-runtime
+      mesa
+      rocmPackages.clr.icd
     ];
   };
 
@@ -25,7 +28,7 @@
     amdvlk.enable = true;
     
     # Enable GPU reset support (useful for recovery)
-    reset.enable = true;
+    # reset.enable = true;
   };
 
   # Optional: Enable Vulkan support
@@ -36,5 +39,9 @@
   boot.kernelParams = [
   "amdgpu.ppfeaturemask=0xffffffff"
   "amdgpu.gpu_recovery=1"
-];
+  "video=DP-1:2560x1440@60"
+  "video=DP-2:1920x1080@144"
+  ];
+
+  boot.initrd.kernelModules = ["amdgpu"];
 }

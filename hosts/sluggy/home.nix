@@ -2,7 +2,7 @@
   imports = [
     ../../home/common.nix
     ../../home/betterlockscreen
-    ../../home/dunst
+    #../../home/dunst
     ../../home/fish
     ../../home/git
     ../../home/i3
@@ -16,6 +16,7 @@
     ../../home/polybar
     ../../home/rofi
     ../../home/wallpapers
+    ../../home/easyeffects
     #../../home/zathura
     ../../home/nixos/nixprograms.nix
 
@@ -23,7 +24,10 @@
     #../../home/k8.nix
     ../../home/langs.nix
     ../../home/python3.nix
-      
+    ../../home/hyprpanel
+    ../../home/hyprland
+    ../../home/hyprlock
+
     #../../home/anytype.nix
     #../../home/todo.nix
     #../../home/obs.nix

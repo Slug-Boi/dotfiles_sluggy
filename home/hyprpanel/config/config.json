@@ -1,0 +1,135 @@
+{
+  "bar": {
+    "launcher": {
+      "autoDetectIcon": true
+    },
+    "workspaces": {
+      "format": "{number}",
+      "show_active": true,
+      "show_numbers": true,
+      "show_occupied": true
+    }
+  },
+  "layout": {
+    "bar": {
+      "layouts": {
+        "": {
+          "left": [
+            "dashboard",
+            "workspaces"
+          ],
+          "middle": [
+            "media"
+          ],
+          "right": [
+            "volume",
+            "systray",
+            "notifications"
+          ]
+        }
+      }
+    }
+  },
+  "menus": {
+    "clock": {
+      "time": {
+        "hideSeconds": true,
+        "military": true
+      },
+      "weather": {
+        "unit": "metric"
+      }
+    }
+  },
+  "theme": {
+    "bar": {
+      "transparent": true
+    },
+    "font": {
+      "name": "IosevkaTerm Nerd Font",
+      "size": "16px"
+    }
+  },
+  "bar.customModules.storage.paths": [
+    "/"
+  ],
+  "bar.workspaces.show_numbered": true,
+  "bar.workspaces.showWsIcons": false,
+  "bar.workspaces.showApplicationIcons": false,
+  "theme.bar.buttons.workspaces.enableBorder": false,
+  "theme.bar.buttons.workspaces.numbered_active_highlight_border": "0.1em",
+  "bar.workspaces.numbered_active_indicator": "highlight",
+  "bar.workspaces.monitorSpecific": true,
+  "menus.clock.weather.location": "Copenhagen",
+  "menus.clock.time.military": true,
+  "bar.clock.format": "%a %d-(%b/%m) %H:%M",
+  "theme.bar.buttons.systray.enableBorder": false,
+  "bar.notifications.show_total": true,
+  "bar.notifications.hideCountWhenZero": true,
+  "theme.bar.buttons.separator.margins": "0.15em",
+  "bar.launcher.autoDetectIcon": true,
+  "bar.autoHide": "fullscreen",
+  "theme.bar.menus.enableShadow": true,
+  "theme.bar.menus.menu.dashboard.scaling": 100,
+  "scalingPriority": "hyprland",
+  "theme.bar.buttons.y_margins": "0.4em",
+  "theme.bar.buttons.padding_y": "0.0rem",
+  "theme.bar.buttons.radius": "0.3em",
+  "theme.bar.menus.card_radius": "0.4em",
+  "notifications.autoDismiss": true,
+  "notifications.showActionsOnHover": false,
+  "theme.bar.floating": false,
+  "theme.bar.buttons.separator.width": "0.1em",
+  "theme.bar.buttons.innerRadiusMultiplier": "0.4",
+  "bar.layouts": {
+    "0": {
+      "left": [
+        "dashboard",
+        "workspaces",
+        "windowtitle"
+      ],
+      "middle": [
+        "media"
+      ],
+      "right": [
+        "volume",
+        "network",
+        "bluetooth",
+        "battery",
+        "systray",
+        "clock",
+        "notifications"
+      ]
+    },
+    "1": {
+      "left": [
+        "dashboard",
+        "workspaces",
+        "windowtitle"
+      ],
+      "middle": [
+        "media"
+      ],
+      "right": [
+        "volume",
+        "clock",
+        "notifications"
+      ]
+    },
+    "2": {
+      "left": [
+        "dashboard",
+        "workspaces",
+        "windowtitle"
+      ],
+      "middle": [
+        "media"
+      ],
+      "right": [
+        "volume",
+        "clock",
+        "notifications"
+      ]
+    }
+  }
+}

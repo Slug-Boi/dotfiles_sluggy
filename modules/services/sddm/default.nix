@@ -1,4 +1,4 @@
-{...}: {
+{pkgs,...}: {
   imports = [
     ./theme.nix
   ];
@@ -8,12 +8,12 @@
       enable = true;
       displayManager = {
         lightdm.enable = false;
-        gdm.enable = false;
       };
     };
 
-    displayManager.sddm = {
-      enable = true;
-    };
+    displayManager = {
+      sessionPackages = [pkgs.hyprland];
+      sddm.enable = true;
+    }; 
   };
 }

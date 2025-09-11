@@ -4,8 +4,8 @@ in {
   imports = [
     (import ../../modules/core-desktop.nix {diskPath = info.diskPath;})
     ../../modules/core-laptop.nix
-    ../../modules/core/nvidia.nix
-    ../../modules/core/nvidia-prime.nix
+    # ../../modules/core/nvidia.nix
+    # ../../modules/core/nvidia-prime.nix
     ../../modules/configs/touchpad.nix
     ../../modules/configs/hidpi.nix
     ../../modules/services/bluetooth.nix

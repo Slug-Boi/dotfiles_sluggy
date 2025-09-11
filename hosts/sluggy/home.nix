@@ -12,7 +12,7 @@
     ../../home/rio
     ../../home/zsh
     ../../home/yazi
-    (import ../../home/picom {nvidiaDrivers = true;})
+    #(import ../../home/picom {nvidiaDrivers = true;})
     ../../home/polybar
     ../../home/rofi
     ../../home/wallpapers

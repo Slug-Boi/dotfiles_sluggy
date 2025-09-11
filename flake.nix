@@ -58,6 +58,9 @@
       url = "github:Slug-Boi/cocommit";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    sddm-astronaut-theme = {
+      url = "./flakes/sddm-astronaut-theme";
+    };
 
     nix-index-database.url = "github:nix-community/nix-index-database";
     nix-index-database.inputs.nixpkgs.follows = "nixpkgs";

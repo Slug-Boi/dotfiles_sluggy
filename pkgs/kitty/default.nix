@@ -9,16 +9,20 @@
 
 rustPlatform.buildRustPackage rec {
   pname = "kitty";
-  version = "v0.8.0";
+  version = "v0.9.0";
 
   src = fetchFromGitHub {
-    owner = "albe2669";
+    owner = "avborup";
     repo = pname;
-    rev = "nix";
-    sha256 = "sha256-D/9yp2n/Swoik6GUBUM71M5p45uqh67IvKDq/QQKA0I=";
+    rev = "master";
+    sha256 = "sha256-6/ednV6hpTObID8VgSxu0xw23DI9Njvz1UuGVWrQH0g=";
   };
 
-  cargoSha256 = "sha256-i/B9p5O5Xm9p3QebwNBnDBQWWM9l++ejTaHo2v9MLa8=";
+  cargoHash = "sha256-e0RLFtfr0iZTFxIIS5ExWOgc9YlLstitj7Im9AQFtlo=";
+
+  postInstall = ''
+    mv $out/bin/kitty $out/bin/katty 2>/dev/null || true
+  '';
 
   nativeBuildInputs = [ pkg-config ];
   buildInputs = [ libiconv openssl ];
@@ -33,15 +37,15 @@ rustPlatform.buildRustPackage rec {
 
   doInstallCheck = true;
   installCheckPhase = ''
-    $out/bin/kitty --help
+    $out/bin/katty --help
   '';
 
   meta = with lib; {
     description = "Kitty is a CLI for interacting with Kattis that allows you to test and submit problems straight from your terminal.";
-    homepage = "https://github.com/albe2669/kitty";
+    homepage = "https://github.com/avborup/kitty";
     license = with licenses; [ mit ];
     maintainers = ["Adrian Borup" "Albert Rise Nielsen"];
-    mainProgram = "kitty";
+    mainProgram = "katty";
   };
 }
 

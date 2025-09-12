@@ -19,18 +19,21 @@
     ../../home/easyeffects
     #../../home/zathura
     ../../home/nixos/nixprograms.nix
+    ../../home/nixos/nixos_langs.nix
 
 
     #../../home/k8.nix
+    ../../home/katty
     ../../home/langs.nix
     ../../home/python3.nix
     ../../home/hyprpanel
     ../../home/hyprland
     ../../home/hyprlock
+    ../../home/swww
 
     #../../home/anytype.nix
     #../../home/todo.nix
-    #../../home/obs.nix
+    ../../home/obs.nix
     ../../home/programs.nix
     ../../home/tmux.nix
     ../../home/utils.nix

@@ -9,7 +9,7 @@
   ];
 
   # Must be installed manually
-  xdg.configFile.kitty = {
-    source = config.lib.file.mkOutOfStoreSymlink "${variables.dotfilesLocation}" + (builtins.toPath "/home/kitty/config");
+  xdg.configFile.katty = {
+    source = config.lib.file.mkOutOfStoreSymlink "${variables.dotfilesLocation}" + (builtins.toPath "/home/katty/config");
   };
 }

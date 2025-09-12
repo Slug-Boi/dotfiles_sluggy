@@ -9,7 +9,8 @@
     tree-sitter
     curl # for vimplug
     virtualenv
-    xclip
+    wl-clipboard
+    clipboard-jh
     stdenv.cc
     lua5_1
     lua51Packages.luarocks

@@ -1,17 +1,27 @@
-{pkgs,variables,config,...}: {
+{pkgs,variables,config,inputs,...}: {
 
 imports = [ ./theme.nix ];
 
 home.sessionVariables = {
     # Force electron apps to use Wayland
     NIXOS_OZONE_WL = "1";
+
+    HYPRCURSOR_THEME = "rose-pine-hyprcursor";
 };
+
+home.packages = with pkgs; [
+    rose-pine-hyprcursor
+];
 
 wayland.windowManager.hyprland = {
 enable = true;
   settings = {
+    env = [
+      "HYPRCURSOR_THEME,rose-pine-hyprcursor"
+    ];
     exec-once = [
       "hyprpanel"
+      "swww-daemon"
     ];
     "$mod" = "SUPER";
     "$terminal" = "rio";
@@ -100,7 +110,11 @@ enable = true;
       "$mod SHIFT, Z, movetoworkspacesilent, special"
       "$mod, Z, togglespecialworkspace"
 
-      # Move windows to workspaces (5-10)
+      # Move windows to workspaces (1-10)
+      "$mod SHIFT, 1, movetoworkspace, 1"
+      "$mod SHIFT, 2, movetoworkspace, 2"
+      "$mod SHIFT, 3, movetoworkspace, 3"
+      "$mod SHIFT, 4, movetoworkspace, 4"
       "$mod SHIFT, 5, movetoworkspace, 5"
       "$mod SHIFT, 6, movetoworkspace, 6"
       "$mod SHIFT, 7, movetoworkspace, 7"

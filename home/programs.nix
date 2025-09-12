@@ -39,7 +39,6 @@
     sqlite
     nix-prefetch
     gh
-    jetbrains.phpstorm
 
     # Cloud-related tools and SDKs
     docker

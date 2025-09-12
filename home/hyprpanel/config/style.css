@@ -1,0 +1,24 @@
+/* In your hyprpanel CSS */
+button {
+    min-width: 44px;
+    min-height: 44px;
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Specific targeting for icon-only buttons */
+button:has(> img:only-child),
+button:has(> i:only-child),
+button:has(> svg:only-child) {
+    padding: 10px; /* Even padding all around */
+    aspect-ratio: 1;
+}
+
+button img,
+button svg {
+    width: 20px;
+    height: 20px;
+    display: block;
+}

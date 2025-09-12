@@ -149,7 +149,7 @@ eval "$(direnv hook zsh)"
 
 alias pinentry='pinentry-mac'
 
-alias katty="~/Documents/temp/katty"
+export KATTIS_KITTY_CONFIG_DIR="~/.config/katty"
 
 alias v="nvim"
 

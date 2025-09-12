@@ -74,7 +74,7 @@
 
   outputs = inputs @ {
     self, darwin, nix-homebrew, homebrew-bundle, homebrew-core, homebrew-cask,homebrew-services, home-manager, homebrew-aerospace, homebrew-felix, homebrew-jorgelbg, nixpkgs, nixpkgs-unstable, disko, nixos-generators,
-    nix-index-database, cocommit,
+    nix-index-database, cocommit, sddm-astronaut-theme,
     ...
   }: let
       linuxSystems = [ "x86_64-linux" "aarch64-linux" ];

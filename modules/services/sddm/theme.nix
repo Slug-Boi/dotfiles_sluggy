@@ -84,5 +84,5 @@
 in {
   environment.systemPackages = packages;
 
-  services.displayManager.sddm.theme = themeName;
+  # services.displayManager.sddm.theme = "sddm-astronaut-theme";
 }

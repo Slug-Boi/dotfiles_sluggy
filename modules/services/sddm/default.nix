@@ -13,7 +13,10 @@
 
     displayManager = {
       sessionPackages = [pkgs.hyprland];
-      sddm.enable = true;
+      sddm = {
+        enable = true;
+        theme = "sddm-astronaut-theme";
+      };
     }; 
   };
 }

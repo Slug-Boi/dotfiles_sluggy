@@ -21,7 +21,6 @@
     ../../home/nixos/nixprograms.nix
     ../../home/nixos/nixos_langs.nix
 
-
     #../../home/k8.nix
     ../../home/katty
     ../../home/langs.nix
@@ -38,5 +37,6 @@
     ../../home/tmux.nix
     ../../home/utils.nix
     ../../home/vscode.nix
+    ../../home/games.nix
   ];
 }

@@ -4,10 +4,16 @@ _:
  "raycast"
  "miniconda"
  "notion"
- #"zen-browser"
+ { name = "zen"; greedy = false; }
  #"docker"
  "sioyek"
- "tailscale"
+ { name = "tailscale-app"; greedy = false; }
  "rio"
- "kawa"
+ "ghostty"
+ "kawa-app"
+ "virtualbox"
+ "utm"
+ "darktable"
+ "omniwm"
+ "obs"
 ]

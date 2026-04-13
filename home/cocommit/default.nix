@@ -6,7 +6,7 @@
   ...
 }: {
   home.packages = [
-    cocommit.packages.${pkgs.system}.default
+    (pkgs.callPackage ../../pkgs/cocommit {})
   ];
 
   # Must be installed manually

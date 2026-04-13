@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{pkgs, pkgs-unstable, ...}: {
   home.packages = with pkgs; [
     # CLI stuff
     # General packages for development and system management
@@ -25,6 +25,7 @@
     lazydocker
     opentofu
     jless
+    #dvc-with-remotes
 
     # Encryption and security tools
     #age
@@ -39,6 +40,9 @@
     sqlite
     nix-prefetch
     gh
+    openapi-generator-cli
+    opentofu
+    cloc
 
     # Cloud-related tools and SDKs
     docker
@@ -67,5 +71,5 @@
     fzf
     cook-cli
   ];
-
+  
 }

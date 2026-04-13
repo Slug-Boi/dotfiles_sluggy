@@ -8,8 +8,11 @@ _:
 "pkg-config"
 "dagger"
 "borders"
+"dvc"
 "sketchybar"
+"svim"
 "gnupg"
 "pinentry-touchid"
 "py-spy"
+"up"
 ]

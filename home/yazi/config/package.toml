@@ -1,52 +1,52 @@
 [[plugin.deps]]
 use = "yazi-rs/plugins:full-border"
-rev = "b12a9ab"
-hash = "1f3dad061209081a6b04dd6ff2cb06c7"
+rev = "88990a6"
+hash = "3996fc74044bc44144b323686f887e1"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:chmod"
-rev = "b12a9ab"
-hash = "2f1053f89d1a301a648ab181d0948e38"
+rev = "88990a6"
+hash = "8da0b15a97b5dfd13941d1ecc617ac7c"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:diff"
-rev = "b12a9ab"
-hash = "7a08e303167d5b655c06da6d570f0333"
+rev = "88990a6"
+hash = "2f08b8249b57737e7257298a3b2a2edc"
 
 [[plugin.deps]]
 use = "pirafrank/what-size"
-rev = "f1c6b69"
-hash = "6e789212eb41d937bab04877ca361099"
+rev = "179ebf6"
+hash = "57056b9728006881d580ccabe8154a9c"
 
 [[plugin.deps]]
 use = "AnirudhG07/plugins-yazi:copy-file-contents"
-rev = "524c52c"
-hash = "27c50e6bc15c09096505b805b238ade0"
+rev = "71545f4"
+hash = "f8530ee84fee95dbcc26bb1d8d8019c7"
 
 [[plugin.deps]]
 use = "Lil-Dank/lazygit"
-rev = "7a08a09"
-hash = "a1fa2b3e1826c3a34804ea8c548e9f80"
+rev = "0e56060"
+hash = "ab2e66065a94cca4886b303518e44bd8"
 
 [[plugin.deps]]
 use = "Reledia/glow"
-rev = "c76bf4f"
-hash = "a6b78bf9af5390e3a85a6951fbb7b93"
+rev = "bd3eaa5"
+hash = "92b5c58159a51c567f82b618cee2b78"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:smart-filter"
-rev = "864a021"
-hash = "f0c4b41b5d19a3144958383333eff6e7"
+rev = "88990a6"
+hash = "407d19bc4fb46eff5fa8ff8337644847"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:smart-enter"
-rev = "864a021"
-hash = "7918aab6a71caf31b58411f789195677"
+rev = "88990a6"
+hash = "56fdabc96fc1f4d53c96eb884b02a5be"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:smart-paste"
-rev = "864a021"
-hash = "104fa2ce07d8890b07fcff68b0aaf923"
+rev = "88990a6"
+hash = "75fd60b2df7115e0a6ca31a6a804d320"
 
 [[flavor.deps]]
 use = "Chromium-3-Oxide/everforest-medium"

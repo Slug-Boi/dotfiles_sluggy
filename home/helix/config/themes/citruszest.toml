@@ -1,0 +1,113 @@
+# CitrusZest theme for Helix
+# Ported from Neovim's CitrusZest
+
+"ui.background" = { bg = "#121212" }
+"ui.background.separator" = { fg = "#404040" }
+
+"ui.linenr" = { fg = "#404040" }
+"ui.linenr.selected" = { fg = "#BFBFBF", bg = "#383838", modifiers = ["bold"] }
+
+"ui.statusline" = { fg = "#BFBFBF", bg = "#232323" }
+"ui.statusline.inactive" = { fg = "#767C77", bg = "#121212" }
+"ui.statusline.normal" = { fg = "#00CC7A", bg = "#232323", modifiers = ["bold"] }
+"ui.statusline.insert" = { fg = "#00BFFF", bg = "#232323", modifiers = ["bold"] }
+"ui.statusline.select" = { fg = "#FFD700", bg = "#232323", modifiers = ["bold"] }
+
+"ui.popup" = { fg = "#BFBFBF", bg = "#232323" }
+"ui.window" = { fg = "#BFBFBF", bg = "#121212" }
+"ui.help" = { fg = "#BFBFBF", bg = "#232323" }
+
+"ui.cursor" = { fg = "#121212", bg = "#BFBFBF" }
+"ui.cursor.primary" = { fg = "#121212", bg = "#BFBFBF", modifiers = ["bold"] }
+"ui.cursor.match" = { fg = "#FFD700", modifiers = ["bold", "underlined"] }
+"ui.cursor.insert" = { fg = "#121212", bg = "#00BFFF" }
+"ui.cursor.select" = { fg = "#121212", bg = "#FFD700" }
+
+"ui.selection" = { bg = "#404040" }
+"ui.selection.primary" = { bg = "#404040", modifiers = ["bold"] }
+
+"ui.text" = { fg = "#BFBFBF" }
+"ui.text.focus" = { fg = "#FFFFFF", modifiers = ["bold"] }
+"ui.text.inactive" = { fg = "#767C77" }
+"ui.text.info" = { fg = "#00BFFF" }
+"ui.text.warning" = { fg = "#FF7431" }
+"ui.text.error" = { fg = "#FF5454", modifiers = ["bold"] }
+"ui.text.diagnostics" = { fg = "#FF5454" }
+"ui.text.hint" = { fg = "#00CC7A" }
+
+"ui.virtual" = { fg = "#767C77" }
+"ui.virtual.ruler" = { bg = "#232323" }
+"ui.virtual.whitespace" = { fg = "#383838" }
+"ui.virtual.indent-guide" = { fg = "#383838" }
+
+"ui.menu" = { fg = "#BFBFBF", bg = "#232323" }
+"ui.menu.selected" = { fg = "#121212", bg = "#00BFFF" }
+"ui.menu.scroll" = { fg = "#00BFFF", bg = "#404040" }
+
+"ui.bufferline" = { fg = "#767C77", bg = "#121212" }
+"ui.bufferline.active" = { fg = "#FFFFFF", bg = "#232323", modifiers = ["bold"] }
+
+"diagnostic.error" = { fg = "#FF5454", modifiers = ["underlined"] }
+"diagnostic.warning" = { fg = "#FF7431", modifiers = ["underlined"] }
+"diagnostic.info" = { fg = "#00BFFF", modifiers = ["underlined"] }
+"diagnostic.hint" = { fg = "#00CC7A", modifiers = ["underlined"] }
+
+"error" = { fg = "#FF5454" }
+"warning" = { fg = "#FF7431" }
+"info" = { fg = "#00BFFF" }
+"hint" = { fg = "#00CC7A" }
+"debug" = { fg = "#FFD700" }
+
+# Syntax highlighting
+"variable" = { fg = "#BFBFBF" }
+"variable.builtin" = { fg = "#FFD700" }
+"variable.parameter" = { fg = "#FF7431" }
+"variable.other.member" = { fg = "#00FFFF" }
+
+"constant" = { fg = "#FFD700" }
+"constant.builtin" = { fg = "#FFD700", modifiers = ["bold"] }
+"constant.numeric" = { fg = "#FF1A75" }
+"constant.character" = { fg = "#FF1A75" }
+"constant.string" = { fg = "#1AFFA3" }
+"constant.string.escape" = { fg = "#FFD700" }
+
+"comment" = { fg = "#767C77", modifiers = ["italic"] }
+
+"keyword" = { fg = "#FF5454" }
+"keyword.control" = { fg = "#FF5454", modifiers = ["bold"] }
+"keyword.operator" = { fg = "#FFD700" }
+"keyword.directive" = { fg = "#FF7431" }
+"keyword.function" = { fg = "#00BFFF" }
+"keyword.storage" = { fg = "#00CC7A" }
+"keyword.storage.modifier" = { fg = "#FFAA54" }
+
+"function" = { fg = "#00BFFF" }
+"function.builtin" = { fg = "#28C9FF", modifiers = ["bold"] }
+"function.method" = { fg = "#33FFFF" }
+
+"type" = { fg = "#00CC7A" }
+"type.builtin" = { fg = "#00CC7A", modifiers = ["bold"] }
+"type.enum" = { fg = "#FFAA54" }
+"type.enum.variant" = { fg = "#FFFF00" }
+
+"constructor" = { fg = "#FFD700" }
+
+"module" = { fg = "#FFAA54" }
+"namespace" = { fg = "#FFAA54" }
+
+"label" = { fg = "#00FFFF" }
+"punctuation" = { fg = "#767C77" }
+"punctuation.delimiter" = { fg = "#767C77" }
+"punctuation.bracket" = { fg = "#BFBFBF" }
+"markup.heading" = { fg = "#00BFFF", modifiers = ["bold"] }
+"markup.list" = { fg = "#FFD700" }
+"markup.bold" = { modifiers = ["bold"] }
+"markup.italic" = { modifiers = ["italic"] }
+"markup.link.url" = { fg = "#00FFFF", modifiers = ["underlined"] }
+"markup.link.text" = { fg = "#00BFFF" }
+"markup.quote" = { fg = "#767C77", modifiers = ["italic"] }
+"markup.raw" = { fg = "#1AFFA3" }
+
+"diff.plus" = { fg = "#00CC7A" }
+"diff.minus" = { fg = "#FF5454" }
+"diff.delta" = { fg = "#FFD700" }

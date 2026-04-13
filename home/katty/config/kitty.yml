@@ -1,8 +1,7 @@
 # The file extension of the default language to use when creating new solution
-#
 # folders. The corresponding template will be generated in the folder. Note that
 # the file extension must belong to one of the defined languages below.
-default_language: rs
+default_language: F#
 
 # A list of languages that kitty can use.
 languages:
@@ -29,6 +28,12 @@ languages:
   #   - $DIR_PATH: The path to the solution folder containing the program source
   #   - $EXE_PATH: The path to the compiled executable
 
+
+- name: Nim
+  file_extension: nim
+  compile_command: nim c $SRC_PATH
+  run_command: $EXE_PATH
+
 - name: C#
   file_extension: cs
   run_command: $EXE_PATH
@@ -40,14 +45,13 @@ languages:
   unix:
     compile_command: mcs -out:$EXE_PATH $SRC_PATH
 
+- name: F#
+  file_extension: fs
+  run_command: dotnet run
+
 - name: Go
   file_extension: go
   compile_command: go build -o $EXE_PATH $SRC_PATH
-  run_command: $EXE_PATH
-
-- name: Haskell
-  file_extension: hs
-  compile_command: ghc -O2 -ferror-spans -threaded -rtsopts $SRC_PATH
   run_command: $EXE_PATH
 
 - name: Java
@@ -57,7 +61,7 @@ languages:
 
 - name: Python 3
   file_extension: py
-  run_command: python3 $SRC_PATH
+  run_command: python $SRC_PATH
 
 - name: C++
   file_extension: cpp
@@ -68,9 +72,4 @@ languages:
   file_extension: c
   # The -static flag has been omitted since it causes issues on macOS.
   compile_command: gcc -g -O2 -std=gnu11 $SRC_PATH -o $EXE_PATH
-  run_command: $EXE_PATH
-
-- name: COBOL
-  file_extension: cbl
-  compile_command: cobc -g -O2 -std=default -free -x -static $SRC_PATH -o $EXE_PATH
   run_command: $EXE_PATH

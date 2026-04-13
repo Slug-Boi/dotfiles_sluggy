@@ -94,7 +94,7 @@ outer.right =      4
 # Disable default macOS hide
 cmd-alt-h = [] # Disable "hide others"
 
-cmd-enter = 'exec-and-forget rio'
+cmd-enter = 'exec-and-forget "/Applications/Rio.app"'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#layout
 alt-7 = 'layout tiles horizontal vertical'

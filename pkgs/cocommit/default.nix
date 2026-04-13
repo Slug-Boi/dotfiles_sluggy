@@ -4,26 +4,27 @@ buildGoModule rec {
 
 
   pname = "cocommit";
-  version = "0.3.0";
+  version = "2.0.2";
 
   src = fetchFromGitHub {
     owner = "Slug-Boi";
     repo = pname;
     rev = "v${version}";
-    sha256 = "sha256-oraadDCyek8qnXFZPj2yitXL3KPK+uW1/VZphrEa/MU=";
+    sha256 = "sha256-7sL6snUMlvd1cZbeYHeNs7AhqgJbKsaiPLzOQWtvT6g=";
   };
 
-  vendorHash = null;
+  vendorHash = "sha256-OzQjFohYO5hGDmFke5raJvJ5qB9byHIHSPy1WKYYQPc=";
 
   buildPhase = ''
-    make build-nix
+    export Coco_Version="v${version}"
+    make
   '';
   
   doCheck = false;
 
   installPhase = ''
     mkdir -p $out/bin
-    cp "src_code/go_src/${pname}" "$out/bin/${pname}"
+    cp "src/${pname}" "$out/bin/${pname}"
     chmod +x $out/bin/${pname}
   '';
 

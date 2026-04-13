@@ -1,0 +1,68 @@
+2026-04-08T17:58:25.943525Z  INFO logger: frontends/rioterm/src/main.rs:127: logging level: INFO
+2026-04-08T17:58:25.943565Z  INFO logger: frontends/rioterm/src/main.rs:129: logging to a file: /Users/slugboi/.config/rio/log/rio.log
+2026-04-08T17:58:25.944118Z  INFO setup_environment_variables: frontends/rioterm/src/main.rs:61: terminfo: rio
+2026-04-08T17:58:26.017676Z  INFO sugarloaf/src/font/mod.rs:788: Font search: 'Query { families: [Name("IosevkaTerm Nerd Font")], weight: Weight(400), stretch: Normal, style: Normal }'
+2026-04-08T17:58:26.318277Z  INFO sugarloaf/src/font/mod.rs:806: Font 'IosevkaTerm Nerd Font' found in /Users/slugboi/Library/Fonts/IosevkaTermNerdFont-Regular.ttf
+2026-04-08T17:58:26.318308Z  INFO sugarloaf/src/font/mod.rs:788: Font search: 'Query { families: [Name("IosevkaTerm Nerd Font")], weight: Weight(300), stretch: Normal, style: Italic }'
+2026-04-08T17:58:26.510839Z  INFO sugarloaf/src/font/mod.rs:806: Font 'IosevkaTerm Nerd Font' found in /Users/slugboi/Library/Fonts/IosevkaTermNerdFont-LightItalic.ttf
+2026-04-08T17:58:26.510862Z  INFO sugarloaf/src/font/mod.rs:788: Font search: 'Query { families: [Name("IosevkaTerm Nerd Font")], weight: Weight(800), stretch: Normal, style: Normal }'
+2026-04-08T17:58:26.693409Z  INFO sugarloaf/src/font/mod.rs:806: Font 'IosevkaTerm Nerd Font' found in /Users/slugboi/Library/Fonts/IosevkaTermNerdFont-ExtraBold.ttf
+2026-04-08T17:58:26.693436Z  INFO sugarloaf/src/font/mod.rs:788: Font search: 'Query { families: [Name("IosevkaTerm Nerd Font")], weight: Weight(800), stretch: Normal, style: Italic }'
+2026-04-08T17:58:26.876315Z  INFO sugarloaf/src/font/mod.rs:806: Font 'IosevkaTerm Nerd Font' found in /Users/slugboi/Library/Fonts/IosevkaTermNerdFont-ExtraBoldItalic.ttf
+2026-04-08T17:58:26.876342Z  INFO sugarloaf/src/font/mod.rs:788: Font search: 'Query { families: [Name("Menlo")], weight: Weight(400), stretch: Normal, style: Normal }'
+2026-04-08T17:58:26.891963Z  INFO sugarloaf/src/font/mod.rs:837: Font 'Menlo' loaded from memory
+2026-04-08T17:58:26.891974Z  INFO sugarloaf/src/font/mod.rs:788: Font search: 'Query { families: [Name("Geneva")], weight: Weight(400), stretch: Normal, style: Normal }'
+2026-04-08T17:58:26.905303Z  INFO sugarloaf/src/font/mod.rs:837: Font 'Geneva' loaded from memory
+2026-04-08T17:58:26.905310Z  INFO sugarloaf/src/font/mod.rs:788: Font search: 'Query { families: [Name("Arial Unicode MS")], weight: Weight(400), stretch: Normal, style: Normal }'
+2026-04-08T17:58:26.925445Z  INFO sugarloaf/src/font/mod.rs:806: Font 'Arial Unicode MS' found in /Library/Fonts/Arial Unicode.ttf
+2026-04-08T17:58:26.971332Z  INFO rio-window/src/platform_impl/macos/window_delegate.rs:2143: Configured window 321 for colorspace: DisplayP3 (layer-backed view enabled)
+2026-04-08T17:58:26.980056Z  INFO rio-window/src/platform_impl/macos/window_delegate.rs:2155: Setting up display link for window WindowId(50991972352)
+2026-04-08T17:58:26.980106Z  INFO rio-window/src/platform_impl/macos/window_delegate.rs:2162: Using display ID 1 from current monitor for window WindowId(50991972352)
+2026-04-08T17:58:26.980683Z  INFO rio-window/src/platform_impl/macos/display_link.rs:186: CVDisplayLink created with GCD for window WindowId(50991972352) on display 1
+2026-04-08T17:58:26.980700Z  INFO rio-window/src/platform_impl/macos/display_link.rs:226: CVDisplayLink started - VSync callbacks active for window WindowId(50991972352)
+2026-04-08T17:58:26.980704Z  INFO rio-window/src/platform_impl/macos/window_delegate.rs:971: Display link initialized successfully for window WindowId(50991972352)
+2026-04-08T17:58:26.981869Z  INFO sugarloaf/src/context/metal.rs:85: Metal device created: "Apple M4"
+2026-04-08T17:58:26.982947Z  INFO frontends/rioterm/src/bindings/mod.rs:885: added a new key_binding: Binding { mods: ModifiersState(SUPER), action: Quit, mode: BindingMode(0x0), notmode: BindingMode(0x0), trigger: Keycode { key: Character("q"), location: Standard } }
+2026-04-08T17:58:26.982978Z  INFO frontends/rioterm/src/context/mod.rs:259: rio -> teletypewriter: create_pty_with_spawn
+2026-04-08T17:58:26.983265Z  INFO teletypewriter/src/unix/mod.rs:448: spawn "/bin/zsh" ["--login"]
+2026-04-08T17:58:26.986263Z  INFO frontends/rioterm/src/application.rs:199: Initialisation complete
+2026-04-08T17:58:29.154495Z  INFO rio-backend/src/crosswords/mod.rs:1713: Reporting private mode Unknown(69)
+2026-04-08T17:58:29.154517Z  INFO rio-backend/src/crosswords/mod.rs:1713: Reporting private mode Named(SyncUpdate)
+2026-04-08T17:58:29.154524Z  INFO rio-backend/src/crosswords/mod.rs:1713: Reporting private mode Unknown(2027)
+2026-04-08T17:58:29.154529Z  INFO rio-backend/src/crosswords/mod.rs:1713: Reporting private mode Unknown(2031)
+2026-04-08T17:58:29.154534Z  INFO rio-backend/src/crosswords/mod.rs:1713: Reporting private mode Unknown(2048)
+2026-04-08T17:58:37.967512Z  INFO rio-backend/src/crosswords/mod.rs:1713: Reporting private mode Unknown(69)
+2026-04-08T17:58:37.967535Z  INFO rio-backend/src/crosswords/mod.rs:1713: Reporting private mode Named(SyncUpdate)
+2026-04-08T17:58:37.967542Z  INFO rio-backend/src/crosswords/mod.rs:1713: Reporting private mode Unknown(2027)
+2026-04-08T17:58:37.967549Z  INFO rio-backend/src/crosswords/mod.rs:1713: Reporting private mode Unknown(2031)
+2026-04-08T17:58:37.967554Z  INFO rio-backend/src/crosswords/mod.rs:1713: Reporting private mode Unknown(2048)
+2026-04-08T18:01:00.613300Z  INFO rio-backend/src/crosswords/mod.rs:1713: Reporting private mode Named(BlinkingCursor)
+2026-04-08T18:01:04.513884Z  INFO rio-backend/src/crosswords/mod.rs:1713: Reporting private mode Named(BlinkingCursor)
+2026-04-08T18:01:44.365834Z  INFO rio-backend/src/crosswords/mod.rs:1713: Reporting private mode Unknown(69)
+2026-04-08T18:01:44.365861Z  INFO rio-backend/src/crosswords/mod.rs:1713: Reporting private mode Named(SyncUpdate)
+2026-04-08T18:01:44.365866Z  INFO rio-backend/src/crosswords/mod.rs:1713: Reporting private mode Unknown(2027)
+2026-04-08T18:01:44.365870Z  INFO rio-backend/src/crosswords/mod.rs:1713: Reporting private mode Unknown(2031)
+2026-04-08T18:01:44.365874Z  INFO rio-backend/src/crosswords/mod.rs:1713: Reporting private mode Unknown(2048)
+2026-04-08T18:04:14.802599Z  INFO rio-backend/src/crosswords/mod.rs:1713: Reporting private mode Named(BlinkingCursor)
+2026-04-08T18:05:53.773708Z  INFO rio-backend/src/crosswords/mod.rs:1713: Reporting private mode Named(BlinkingCursor)
+2026-04-08T18:06:03.271805Z  INFO rio-backend/src/crosswords/mod.rs:1713: Reporting private mode Named(BlinkingCursor)
+2026-04-08T18:07:55.718216Z  INFO rio-backend/src/crosswords/mod.rs:1713: Reporting private mode Named(BlinkingCursor)
+2026-04-08T18:08:07.061094Z  INFO rio-backend/src/crosswords/mod.rs:1713: Reporting private mode Unknown(69)
+2026-04-08T18:08:07.061119Z  INFO rio-backend/src/crosswords/mod.rs:1713: Reporting private mode Named(SyncUpdate)
+2026-04-08T18:08:07.061126Z  INFO rio-backend/src/crosswords/mod.rs:1713: Reporting private mode Unknown(2027)
+2026-04-08T18:08:07.061132Z  INFO rio-backend/src/crosswords/mod.rs:1713: Reporting private mode Unknown(2031)
+2026-04-08T18:08:07.061137Z  INFO rio-backend/src/crosswords/mod.rs:1713: Reporting private mode Unknown(2048)
+2026-04-08T18:08:24.836879Z  INFO rio-backend/src/crosswords/mod.rs:1713: Reporting private mode Named(BlinkingCursor)
+2026-04-08T18:09:44.339438Z  INFO rio-backend/src/crosswords/mod.rs:1713: Reporting private mode Named(BlinkingCursor)
+2026-04-08T18:09:54.677485Z  INFO rio-backend/src/crosswords/mod.rs:1713: Reporting private mode Unknown(69)
+2026-04-08T18:09:54.677510Z  INFO rio-backend/src/crosswords/mod.rs:1713: Reporting private mode Named(SyncUpdate)
+2026-04-08T18:09:54.677517Z  INFO rio-backend/src/crosswords/mod.rs:1713: Reporting private mode Unknown(2027)
+2026-04-08T18:09:54.677523Z  INFO rio-backend/src/crosswords/mod.rs:1713: Reporting private mode Unknown(2031)
+2026-04-08T18:09:54.677529Z  INFO rio-backend/src/crosswords/mod.rs:1713: Reporting private mode Unknown(2048)
+2026-04-08T18:10:01.423944Z  INFO rio-backend/src/crosswords/mod.rs:1713: Reporting private mode Named(BlinkingCursor)
+2026-04-08T18:10:15.051972Z  INFO rio-backend/src/crosswords/mod.rs:1713: Reporting private mode Unknown(69)
+2026-04-08T18:10:15.052048Z  INFO rio-backend/src/crosswords/mod.rs:1713: Reporting private mode Named(SyncUpdate)
+2026-04-08T18:10:15.052062Z  INFO rio-backend/src/crosswords/mod.rs:1713: Reporting private mode Unknown(2027)
+2026-04-08T18:10:15.052069Z  INFO rio-backend/src/crosswords/mod.rs:1713: Reporting private mode Unknown(2031)
+2026-04-08T18:10:15.052076Z  INFO rio-backend/src/crosswords/mod.rs:1713: Reporting private mode Unknown(2048)
+2026-04-08T18:10:24.973867Z  INFO rio-backend/src/crosswords/mod.rs:1713: Reporting private mode Named(BlinkingCursor)

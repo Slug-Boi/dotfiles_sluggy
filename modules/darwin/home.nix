@@ -10,7 +10,8 @@
 
     #../../home/alacritty
     ../../home/git
-    ../../home/kitty
+    # ../../home/kitty
+    ../../home/katty
     ../../home/rio
     ../../home/zsh
     ../../home/yazi
@@ -19,6 +20,9 @@
     ../../home/nvim 
     #../../home/php.nix
     ../../home/zellij
+    ../../home/helix
+    ../../home/gh-tools
+    ../../home/ghostty
 
     ../../home/programs.nix
     ../../home/langs.nix

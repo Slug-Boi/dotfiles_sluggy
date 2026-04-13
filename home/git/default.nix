@@ -9,8 +9,20 @@
 
   programs.git = {
     enable = true;
-    userName = variables.git.username;
-    userEmail = variables.git.email;
+    settings = {
+      user = {
+      name = variables.git.username;
+      email = variables.git.email;
+      };
+      init.defaultBranch = "master";
+      pull.rebase = false;
+      # rebase.autoStash = true;
+      credential.helper = "store";
+      core = {
+        editor = "vim";
+        autocrlf = "input";
+      };
+    };
     ignores = [
       "*.swp"
       "*.swo"
@@ -22,16 +34,6 @@
       "tmp/"
     ];
 
-    extraConfig = {
-      init.defaultBranch = "master";
-      pull.rebase = false;
-      # rebase.autoStash = true;
-      credential.helper = "store";
-      core = {
-        editor = "vim";
-        autocrlf = "input";
-      };
-    };
 
     lfs = {
       enable = true;

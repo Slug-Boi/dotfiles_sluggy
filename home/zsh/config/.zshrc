@@ -16,7 +16,7 @@ fi
 # Exports to path
 export LIBRARY_PATH=$LIBRARY_PATH:/Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/lib
 
-PATH="$HOME/.local/bin:$HOME/.go/bin:$PATH"
+PATH="$HOME/.local/bin:$HOME/.go/bin:$HOME/.cargo/bin:$PATH"
 
 # Sets the default editor to nvim
 export EDITOR="nvim"
@@ -122,11 +122,13 @@ alias ntfy="/Users/slugboi/Documents/bash_scripts/ntfy.sh"
 alias cogo="~/Documents/bash_scripts/cocommit"
 alias slidestomd="~/Documents/bash_scripts/slidestomd.sh"
 alias svg-term="/usr/local/Cellar/node/23.2.0/lib/node_modules/svg-term-cli/lib/cli.js"
-export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_CONFIG_HOME="$HOME/.config/"
 
 # quick edits and editors
 alias rc="nvim ~/Documents/dotfiles_sluggy/home/zsh/config/.zshrc"
 alias emacs="doom run"
+alias lg="lazygit"
+alias ldo="lazydocker"
 
 # ProgrammerSomData aliases
 alias fslex="dotnet ~/Documents/ITU/5_sem/PGSD/ProgramsAsDataCodeE2024/fsharp/fslex.dll"
@@ -158,4 +160,6 @@ source /nix/store/*-fzf-*/share/fzf/key-bindings.zsh
 source /nix/store/*-fzf-*/share/fzf/completion.zsh
 
 
+export DOTNET_ROOT=$(dirname $(which dotnet))
 
+export PATH="$PATH:/Users/slugboi/.dotnet/tools"

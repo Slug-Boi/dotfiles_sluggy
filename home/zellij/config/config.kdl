@@ -1,11 +1,34 @@
 // If you'd like to override the default keybindings completely, be sure to change "keybinds" to "keybinds clear-defaults=true"
-keybinds {
+keybinds clear-defaults=true {
     normal {
         // uncomment this and adjust key if using copy_on_select=false
         // bind "Alt c" { Copy; }
+        bind "Enter" {
+            // Passthru `Enter`.
+            WriteChars "\u{000D}";
+            // Invoke autolock to immediately assess proper lock state.
+            // (This provides a snappier experience compared to
+            // solely relying on `reaction_seconds` to elapse.)
+            MessagePlugin "autolock" {};
+        }
+
+        bind "Alt r" {
+          MessagePlugin {
+              payload "multitask_run"
+          }
+        }
+        bind "Alt m" {
+          Run "open_multitask";
+        }
     }
     locked {
         bind "Ctrl g" { SwitchToMode "Normal"; }
+        bind "Alt z" {
+            // Disable the autolock plugin.
+            MessagePlugin "autolock" {payload "disable";};
+            // Unlock Zellij.
+            SwitchToMode "Normal";
+        }
     }
     resize {
         bind "Ctrl n" { SwitchToMode "Normal"; }
@@ -160,7 +183,7 @@ keybinds {
     }
     shared_except "locked" {
         bind "Ctrl g" { SwitchToMode "Locked"; }
-        bind "Ctrl q" { Quit; }
+                bind "Ctrl q" { Quit; }
         bind "Alt f" { ToggleFloatingPanes; }
         bind "Alt n" { NewPane; }
         bind "Alt i" { MoveTab "Left"; }
@@ -198,6 +221,59 @@ keybinds {
     shared_except "tmux" "locked" {
         bind "Ctrl b" { SwitchToMode "Tmux"; }
     }
+    shared_except "locked" {
+      bind "Alt y" {
+        LaunchOrFocusPlugin "zellij-pane-picker" {
+          floating true; move_to_focused_tab true;
+        }
+      }
+      bind "Ctrl y" {
+        LaunchOrFocusPlugin "file:~/.config/zellij/plugins/zellij_forgot.wasm" {
+            "lock"                  "ctrl + g"
+            "unlock"                "ctrl + g"
+            "new pane"              "ctrl + p + n"
+            "change focus of pane"  "ctrl + p + arrow key"
+            "close pane"            "ctrl + p + x"
+            "rename pane"           "ctrl + p + c"
+            "toggle fullscreen"     "ctrl + p + f"
+            "toggle floating pane"  "ctrl + p + w"
+            "toggle embed pane"     "ctrl + p + e"
+            "choose right pane"     "ctrl + p + l"
+            "choose left pane"      "ctrl + p + r"
+            "choose upper pane"     "ctrl + p + k"
+            "choose lower pane"     "ctrl + p + j"
+            "new tab"               "ctrl + t + n"
+            "close tab"             "ctrl + t + x"
+            "change focus of tab"   "ctrl + t + arrow key"
+            "rename tab"            "ctrl + t + r"
+            "sync tab"              "ctrl + t + s"
+            "brake pane to new tab" "ctrl + t + b"
+            "brake pane left"       "ctrl + t + ["
+            "brake pane right"      "ctrl + t + ]"
+            "toggle tab"            "ctrl + t + tab"
+            "increase pane size"    "ctrl + n + +"
+            "decrease pane size"    "ctrl + n + -"
+            "increase pane top"     "ctrl + n + k"
+            "increase pane right"   "ctrl + n + l"
+            "increase pane bottom"  "ctrl + n + j"
+            "increase pane left"    "ctrl + n + h"
+            "decrease pane top"     "ctrl + n + K"
+            "decrease pane right"   "ctrl + n + L"
+            "decrease pane bottom"  "ctrl + n + J"
+            "decrease pane left"    "ctrl + n + H"
+            "move pane to top"      "ctrl + h + k"
+            "move pane to right"    "ctrl + h + l"
+            "move pane to bottom"   "ctrl + h + j"
+            "move pane to left"     "ctrl + h + h"
+            "search"                "ctrl + s + s"
+            "go into edit mode"     "ctrl + s + e"
+            "detach session"        "ctrl + o + w"
+            "open session manager"  "ctrl + o + w"
+            "quit zellij"           "ctrl + q"
+            floating true
+        }
+    }
+  }   
 }
 
 // Plugin aliases - can be used to change the implementation of Zellij
@@ -216,10 +292,140 @@ plugins {
     }
     configuration location="zellij:configuration"
     plugin-manager location="zellij:plugin-manager"
+    zellij-pane-picker location="file:~/.config/zellij/plugins/zellij-pane-picker.wasm" 
+    zjstatus location="file:~/.config/zellij/plugins/zjstatus.wasm" {
+        // -- Gruvbox Dark mode
+        color_bg0 "#282828" //dark0
+        color_bg1 "#3c3836" //dark1
+        color_bg2 "#504945" //dark2
+        color_bg3 "#665c54" //dark3
+        color_bg4 "#7c6f64" //dark4
+        color_fg0 "#fbf1c7" //light0
+        color_fg1 "#ebdbb2" //light1
+        color_fg2 "#d5c4a1" //light2
+        color_fg3 "#bdae93" //light3
+        color_fg4 "#a89984" //light4
+        color_red "#f2594b" // bright_red
+        color_green "#b8bb26" //bright_green
+        color_yellow "#e9b143" // bright_yellow
+        color_blue "#83a598" //bright_blue
+        color_purple "#d3869b" //bright_purple
+        color_aqua "#8ec07c" //bright_aqua
+        color_gray "#a89984" //bright_gray
+        color_orange "#fe8019" //bright_orange
+        color_neutral_red "#cc241d" //neutral_red
+        color_neutral_green "#98971a" //neutral_green
+        color_neutral_yellow "#d79921" //neutral_yellow
+        color_neutral_blue "#458588" //neutral_blue
+        color_neutral_purple "#b16286" //neutral_purple
+        color_neutral_aqua "#689d6a" //neutral_aqua
+        color_neutral_gray "#928374" //neutral_gray
+        color_neutral_orange "#d65d0e" //neatural_orange
+
+        color_base "#232136"
+        color_surface "#2a273f"
+        color_overlay "#393552"
+        color_muted "#6e6a86"
+        color_subtle "#908caa"
+        color_text "#e0def4"
+        color_love "#eb6f92"
+        color_gold "#f6c177"
+        color_rose "#ea9a97"
+        color_pine "#3e8fb0"
+        color_foam "#9ccfd8"
+        color_Iris "#c4a7e7"
+        color_highlight_low "#2a283e"
+        color_highlight_med "#44415a"
+        color_highlight_high "#56526e"
+        format_left   "#[fg=$text] {session} {mode}#[]"
+        format_center "{tabs}"
+        // format_right  "#[fg=$bg2]#[bg=$bg2,fg=$fg4] {command_user}@{command_host} #[bg=$bg2,fg=$fg3]#[bg=$fg3,fg=$bg1] {datetime} "
+        format_space  "#[fg=$fg1]"
+        format_hide_on_overlength "true"
+        format_precedence "lrc"
+
+        border_enabled  "false"
+        border_char     "─"
+        border_format   "#[fg=$bg1]{char}"
+        border_position "top"
+
+        hide_frame_for_single_pane "true"
+
+        mode_normal        "#[fg=$text] NORMAL "
+        mode_locked        "#[fg=$muted] LOCKED "
+        mode_pane          "#[fg=$pine,bold] PANE "
+        mode_tab           "#[fg=$rose,bold] TAB "
+        mode_scroll        "#[fg=$foam,bold] SCROLL "
+        mode_enter_search  "#[fg=$text,bold] ENT-SEARCH "
+        mode_search        "#[fg=$subtle,bold] SEARCH "
+        mode_resize        "#[fg=$gold,bold] RESIZE "
+        mode_rename_tab    "#[fg=$gold,bold] RENAME TAB "
+        mode_rename_pane   "#[fg=$gold,bold] RENAME PANE "
+        mode_move          "#[fg=$gold,bold] MOVE "
+        mode_session       "#[fg=$love,bold] SESSION "
+        mode_prompt        "#[fg=$love,bold] PROMPT "
+
+        tab_normal              "#[fg=$subtle] {index} #[fg=$subtle] {name} {floating_indicator} "
+        tab_normal_fullscreen   "#[fg=$subtle] {index} #[fg=$subtle] {name} {fullscreen_indicator} "
+        tab_normal_sync         "#[fg=$subtle] {index} #[fg=$subtle] {name} {sync_indicator} "
+        tab_active              "#[bg=$overlay,fg=$text] {index} #[bg=$overlay,fg=$text,bold] {name} {floating_indicator} "
+        tab_active_fullscreen   "#[bg=$overlay,fg=$text] {index} #[bg=$overlay,fg=$text,bold] {name} {fullscreen_indicator} "
+        tab_active_sync         "#[bg=$overlay,fg=$text] {index} #[bg=$overlay,fg=$text,bold] {name} {sync_indicator} "
+        tab_separator           " "
+
+        tab_sync_indicator       ""
+        tab_fullscreen_indicator "󰊓"
+        tab_floating_indicator   "󰹙"
+
+        notification_format_unread "#[bg=$orange,fg=$bg1]#[bg=$orange,fg=$bg1] {message} #[bg=$bg1,fg=$orange]"
+        notification_format_no_notifications ""
+        notification_show_interval "10"
+
+        command_host_command    "uname -n"
+        command_host_format     "{stdout}"
+        command_host_interval   "0"
+        command_host_rendermode "static"
+
+        command_user_command    "whoami"
+        command_user_format     "{stdout}"
+        command_user_interval   "0"
+        command_user_rendermode "static"
+        datetime        "#[fg=#6C7086,bold] {format} "
+        datetime_format "%A, %d %b %Y %H:%M"
+        datetime_timezone "Europe/Berlin"
+    }
+    zjstatus-hints location="file:~/.config/zellij/plugins/zjstatus-hints.wasm" {
+        // Maximum number of characters to display
+        max_length 0 // 0 = unlimited
+        // String to append when truncated
+        overflow_str "..." // default
+        // Name of the pipe for zjstatus integration
+        pipe_name "zjstatus_hints" // default
+        // Hide hints in base mode (a.k.a. default mode)
+        // E.g. if you have set default_mode to "locked", then
+        // you can hide hints in the locked mode by setting this to true
+        hide_in_base_mode false // default
+    }
+    autolock location="file:~/.config/zellij/plugins/zellij-autolock.wasm" {
+        // Enabled at start?
+        is_enabled true
+        // Lock when any open these programs open.
+        triggers "nvim|vim|git|fzf|zoxide|lazygit|lazydocker"
+        // Reaction to input occurs after this many seconds. (default=0.3)
+        // (An existing scheduled reaction prevents additional reactions.)
+        reaction_seconds "0.3"
+        // Print to Zellij log? (default=false)
+        print_to_log false
+    }
 }
+
+
 
 // Plugins to load in the background when a new session starts
 load_plugins {
+  zellij-pane-picker
+  autolock
+  zjstatus-hints
   // "file:/path/to/my-plugin.wasm"
   // "https://example.com/my-plugin.wasm"
 }
@@ -231,7 +437,7 @@ load_plugins {
 //   - detach (Default)
 //   - quit
 //
-// on_force_close "quit"
+// on_force_close "detach"
 
 //  Send a request for a simplified ui (without arrow fonts) to plugins
 //  Options:
@@ -445,7 +651,7 @@ theme "monokai"
 // Default: "default"
 // (Requires restart)
 //
-// default_layout "compact"
+default_layout "terminal"
 
 // Choose the mode that zellij uses when starting up.
 // Default: normal
@@ -511,12 +717,12 @@ theme "monokai"
 // The folder in which Zellij will look for layouts
 // (Requires restart)
 //
-// layout_dir "/path/to/my/layout_dir"
+// layout_dir "~/.config/zellij/layouts"
 
 // The folder in which Zellij will look for themes
 // (Requires restart)
 //
-// theme_dir "/path/to/my/theme_dir"
+// theme_dir "~/.config/zellij/themes"
 
 // Enable or disable the rendering of styled and colored underlines (undercurl).
 // May need to be disabled for certain unsupported terminals

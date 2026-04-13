@@ -14,6 +14,8 @@
     stdenv.cc
     lua5_1
     lua51Packages.luarocks
+    lua51Packages.dkjson
+    # luajitPackages.luarocks
     lua-language-server
     rust-analyzer
   ];  

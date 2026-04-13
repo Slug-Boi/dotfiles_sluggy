@@ -1,0 +1,4 @@
+#!/bin/bash
+
+zellij action start-or-reload-plugin file:$HOME/.config/zellij/plugins/multitask.wasm --configuration shell="$SHELL,ccwd=`pwd`"
+zellij action close-pane

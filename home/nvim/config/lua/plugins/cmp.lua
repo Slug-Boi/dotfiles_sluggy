@@ -8,6 +8,7 @@ local opts = function(cmp)
     },
     completion = {
       completeopt = "menu,menuone,noinsert",
+      autocompletion = true,
       get_trigger_characters = function(trigger_characters)
         return vim.tbl_filter(function(char)
           return char ~= " " and char ~= "\t" and char ~= "\n"
@@ -55,7 +56,7 @@ local opts = function(cmp)
       { name = 'vsnip' },
       { name = 'path' },
       { name = 'buffer' },
-      { name = 'omni ' },
+      { name = 'omni' },
     },
   }
 end
@@ -69,6 +70,9 @@ return {
       "hrsh7th/vim-vsnip",
       "hrsh7th/cmp-path",
       "hrsh7th/cmp-buffer",
+      "hrsh7th/cmp-omni",
+      "hrsh7th/cmp-cmdline",
+
     },
     config = function()
       local cmp = require("cmp")

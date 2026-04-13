@@ -46,6 +46,10 @@
       url = "github:nikitabobko/homebrew-tap";
       flake = false;
     };
+    homebrew-omnivm = {
+      url = "github:BarutSRB/homebrew-tap";
+      flake = false;
+    };
     homebrew-felix = {
       url = "github:FelixKratz/homebrew-formulae";
       flake = false;
@@ -73,7 +77,7 @@
   };
 
   outputs = inputs @ {
-    self, darwin, nix-homebrew, homebrew-bundle, homebrew-core, homebrew-cask,homebrew-services, home-manager, homebrew-aerospace, homebrew-felix, homebrew-jorgelbg, nixpkgs, nixpkgs-unstable, disko, nixos-generators,
+    self, darwin, nix-homebrew, homebrew-bundle, homebrew-core, homebrew-cask,homebrew-services, home-manager, homebrew-aerospace, homebrew-omnivm, homebrew-felix, homebrew-jorgelbg, nixpkgs, nixpkgs-unstable, disko, nixos-generators,
     nix-index-database, cocommit, sddm-astronaut-theme,
     ...
   }: let
@@ -163,6 +167,7 @@
                   "nikitabobko/homebrew-nikitabobko" = homebrew-aerospace;
                   "felix/homebrew-felix" = homebrew-felix;
                   "jorgelbg/homebrew-jorgelbg" = homebrew-jorgelbg;
+                  "BarutSRB/homebrew-tap" = homebrew-omnivm;
                 };
 
                 mutableTaps = false;
